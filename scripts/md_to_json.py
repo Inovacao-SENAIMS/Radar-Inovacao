@@ -216,7 +216,13 @@ def parse_markdown(text: str) -> dict:
         publico_raw = row.get("Público-alvo", "").strip().lower()
         empresa_keywords = ["empresa", "empresas", "mpe", "média", "grande", "startup", "ict", "consórcio", "parceria", "pme", "industri", "tecnológica", "micro/pequena", "unidades"]
         pessoa_keywords = ["pessoa física", "pf", "professor", "estudante", "pesquisador", "mulher", "bolsa", "docente", "orientador", "escola", "universidade", "ict/universidade"]
-        tipo = "Pessoa Física" if any(kw in publico_raw for kw in pessoa_keywords) else "Empresa"
+        ict_keywords = ["instituto federal", "institutos federais", "instituição de ciência", "instituições de ciência", "ict", "universidade", "ies"]
+        if any(kw in publico_raw for kw in ict_keywords):
+            tipo = "ICT"
+        elif any(kw in publico_raw for kw in pessoa_keywords):
+            tipo = "Pessoa Física"
+        else:
+            tipo = "Empresa"
 
         # Strip markdown bold from dias
         dias_raw = row.get("Dias restantes", "")

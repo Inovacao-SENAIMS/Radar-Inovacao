@@ -37,7 +37,7 @@ Para colocar a newsletter em produção, siga o [Guia de ativação](GUIA_ATIVAC
 │   ├── md_to_json.py          Parser: Markdown → JSON + JS
 │   ├── render_static.py       Gerador HTML estático (opcional)
 │   ├── email_template.py      Design do e-mail digest (HTML + texto)
-│   ├── send_newsletter.py     Envio via Gmail SMTP (lotes, log anti-duplicata)
+│   ├── send_newsletter.py     Envio via Gmail SMTP (lotes, registro anti-duplicata no Sheets)
 │   ├── newsletter_config.json Config não-secreta da newsletter
 │   └── google/appsscript_subscribers.gs  Backend Google (colar no Apps Script)
 ├── assets/

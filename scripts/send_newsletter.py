@@ -16,7 +16,7 @@ USO
 
   python scripts/send_newsletter.py --send
       Envia para todos os assinantes ativos (respeita a cota diária do Gmail:
-      lote de `batch_size` por execução, com log de envio que evita duplicatas —
+      lote de `batch_size` por execução, com registro de entrega no Google Sheets que evita duplicatas —
       reexecute no dia seguinte para continuar o lote).
 
   Flags: --force (envia mesmo sem novidades)  --dry-run (monta tudo, não envia)
@@ -41,7 +41,7 @@ from email.message import EmailMessage
 from email.utils import formataddr
 from pathlib import Path
 from urllib.parse import urlencode
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -50,7 +50,6 @@ import email_template as tpl  # noqa: E402
 
 CONFIG_PATH = ROOT / "scripts" / "newsletter_config.json"
 SECRETS_PATH = ROOT / "scripts" / "newsletter_secrets.json"
-SENT_LOG_PATH = ROOT / "newsletter" / "sent_log.json"
 
 
 def die(msg):
@@ -123,13 +122,40 @@ def fetch_subscribers(cfg, api_key):
     return out
 
 
-def load_sent_log():
-    return load_json(SENT_LOG_PATH, {})
+def _newsletter_api_request(cfg, api_key, params):
+    """Calls the protected Apps Script API and returns its JSON response."""
+    if not cfg.get("webapp_url"):
+        die("webapp_url vazio em scripts/newsletter_config.json — veja PRD.md § Configuração.")
+    if not api_key:
+        die("NEWSLETTER_API_KEY não definida (variável de ambiente ou newsletter_secrets.json).")
+    query = {"key": api_key}
+    query.update(params)
+    request = Request(cfg["webapp_url"] + "?" + urlencode(query), method="GET")
+    try:
+        with urlopen(request, timeout=30, context=ssl.create_default_context()) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        die(f"Falha ao consultar o Apps Script ({e}). Verifique a implantação e a URL.")
+    if "error" in payload:
+        die(f"Apps Script recusou a chave ({payload['error']}). Confira NEWSLETTER_API_KEY.")
+    return payload
 
 
-def save_sent_log(log):
-    SENT_LOG_PATH.parent.mkdir(exist_ok=True)
-    SENT_LOG_PATH.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
+def fetch_delivered_emails(cfg, api_key, edition):
+    """Returns addresses already sent a particular edition, from Google Sheets."""
+    payload = _newsletter_api_request(cfg, api_key, {"action": "sent", "edition": edition})
+    return {str(email).strip().lower() for email in payload.get("emails", []) if str(email).strip()}
+
+
+def record_delivery(cfg, api_key, edition, email):
+    """Persists a successful SMTP delivery so a later runner cannot resend it."""
+    payload = _newsletter_api_request(cfg, api_key, {
+        "action": "record_sent",
+        "edition": edition,
+        "email": email.strip().lower(),
+    })
+    if not payload.get("ok"):
+        die("Apps Script não confirmou o registro do envio; interrompa e tente novamente após verificar a planilha.")
 
 
 def connect_smtp(cfg, secrets):
@@ -207,8 +233,7 @@ def main():
         print("Nenhum assinante ativo no momento — nada a enviar.")
         return
 
-    log = load_sent_log()
-    ja_enviados = set(log.get(ref, []))
+    ja_enviados = fetch_delivered_emails(cfg, secrets["newsletter_api_key"], ref)
     pendentes = [s for s in subs if s["email"] not in ja_enviados]
 
     print(f"Assunto: {mail['subject']}")
@@ -222,7 +247,7 @@ def main():
     restantes_apos_lote = len(pendentes) - len(lote)
     if not lote:
         print(f"Lote diário de {cfg['batch_size']} e-mails já consumido para {ref}.")
-        print("Reexecute amanhã para enviar ao restante (o log evita duplicatas).")
+        print("Reexecute amanhã para enviar ao restante (o registro remoto evita duplicatas).")
         return
 
     if args.dry_run:
@@ -238,6 +263,7 @@ def main():
             m = tpl.build_email(data, cfg, s)  # e-mail individual (saudação + unsubscribe tokenizado)
             try:
                 send_to(smtp, cfg, secrets, s, m)
+                record_delivery(cfg, secrets["newsletter_api_key"], ref, s["email"])
                 enviados.append(s["email"])
                 print(f"  OK  {s['email']}")
             except Exception as e:
@@ -247,16 +273,12 @@ def main():
     finally:
         smtp.quit()
 
-    log.setdefault(ref, [])
-    log[ref] = sorted(set(log[ref]) | set(enviados))
-    save_sent_log(log)
-
     print()
     print(f"Enviados: {len(enviados)} | Falhas: {len(falhas)} | Restantes p/ próximo lote: {restantes_apos_lote}")
     if restantes_apos_lote > 0:
         print("Cota diária do Gmail: reexecute o comando amanhã para enviar ao restante.")
     if falhas:
-        print("Falhas (reexecutar resolve — o log evita duplicatas):")
+        print("Falhas (reexecutar tenta novamente; confira a aba Envios newsletter antes de novo disparo):")
         for email, err in falhas:
             print(f"  - {email}: {err}")
 

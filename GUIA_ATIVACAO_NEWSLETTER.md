@@ -49,6 +49,8 @@ Valor: troque-por-uma-chave-longa-e-aleatoria
 
 Guarde esta URL. Ela será usada pelo formulário público e pelo script de envio.
 
+> **Ao atualizar o código do Apps Script:** em **Implantar → Gerenciar implantações**, edite a implantação Web App, selecione **Nova versão** e implante novamente. A URL `/exec` permanece a mesma. Esta versão cria a aba privada **Envios newsletter** e só ativa o cadastro após a confirmação por e-mail.
+
 ## 4. Conectar o formulário do site
 
 Abra [data/newsletter.js](</Users/danillosantanadearaujo/Documents/Python%20Scripts/monitor-editais/data/newsletter.js>) e preencha `webappUrl` com a URL copiada.
@@ -131,7 +133,7 @@ Quando tudo estiver correto, envie aos assinantes ativos:
 python3 scripts/send_newsletter.py --send
 ```
 
-O script registra quem recebeu a edição em `newsletter/sent_log.json`, evitando duplicidade se for executado novamente.
+O script registra quem recebeu cada edição na aba privada **Envios newsletter** da mesma planilha, evitando duplicidade mesmo entre execuções locais e do GitHub Actions.
 
 ## 8. Publicar o site configurado
 
@@ -165,4 +167,4 @@ Envie somente após revisar a prévia. Caso o lote seja maior que o limite confi
 | O script acusa`webapp_url vazio`                         | Preencha`scripts/newsletter_config.json` com a mesma URL `/exec`.                                     |
 | O script acusa chave recusada                              | Confirme que`NEWSLETTER_API_KEY` é idêntica a `API_KEY` do Apps Script.                             |
 | O script não autentica no Gmail                           | Gere uma nova senha de app e confirme que a autenticação em duas etapas está ativa.                    |
-| O e-mail foi enviado duas vezes                            | Não remova`newsletter/sent_log.json`; ele é a proteção contra duplicidade.                          |
+| O e-mail foi enviado duas vezes                            | Confira a aba privada **Envios newsletter** e interrompa novos disparos; ela é a proteção contra duplicidade. |

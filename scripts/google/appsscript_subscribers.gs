@@ -34,6 +34,7 @@ var API_KEY  = PropertiesService.getScriptProperties().getProperty('NEWSLETTER_A
 var SITE_URL = 'https://ldanill01.github.io/monitor-editais/';
 var SENDER_NAME = 'Radar de Editais — SENAI MS';
 var SHEET_NAME = 'Assinantes';
+var DELIVERIES_SHEET_NAME = 'Envios newsletter';
 
 /* Colunas: 0 Timestamp | 1 Nome | 2 Email | 3 Status | 4 Token | 5 Consentimento | 6 Origem | 7 ConfirmadoEm | 8 CanceladoEm | 9 Observações */
 var COL = { TS: 0, NOME: 1, EMAIL: 2, STATUS: 3, TOKEN: 4, CONSENT: 5, ORIGEM: 6, OK_EM: 7, OFF_EM: 8, OBS: 9 };
@@ -57,6 +58,32 @@ function rows_() {
   var values = sh.getDataRange().getValues();
   values.shift(); // remove header
   return { sheet: sh, data: values };
+}
+
+function deliveriesSheet_() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(DELIVERIES_SHEET_NAME) || ss.insertSheet(DELIVERIES_SHEET_NAME);
+  if (sh.getLastRow() === 0 || String(sh.getRange(1, 1).getValue()) !== 'Edicao') {
+    sh.clear();
+    sh.getRange(1, 1, 1, 3).setValues([['Edicao', 'Email', 'EnviadoEm']]);
+    sh.getRange(1, 1, 1, 3).setFontWeight('bold').setBackground('#003876').setFontColor('#FFFFFF');
+    sh.setFrozenRows(1);
+  }
+  return sh;
+}
+
+function sentEmails_(edition) {
+  var sh = deliveriesSheet_();
+  var values = sh.getDataRange().getValues();
+  var seen = {};
+  for (var i = 1; i < values.length; i++) {
+    if (String(values[i][0]) === edition) seen[String(values[i][1]).trim().toLowerCase()] = true;
+  }
+  return Object.keys(seen);
+}
+
+function apiReply_(payload) {
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(ContentService.MimeType.JSON);
 }
 
 /* ============================ doPost — assinatura ============================ */
@@ -97,18 +124,16 @@ function doPost(e) {
       }
     }
 
-    var token = '';
-    var linha = [now, nome, email, 'ativo', token, 'sim', p.origem || 'site', now, '', existing ? 'reinscrição' : ''];
+    var token = Utilities.getUuid();
+    var linha = [now, nome, email, 'pendente', token, 'sim', p.origem || 'site', '', '', existing ? 'reinscrição' : ''];
     if (rowIdx > 0) {
       r.sheet.getRange(rowIdx, 1, 1, 10).setValues([linha]);
     } else {
       r.sheet.appendRow(linha);
     }
 
-    return reply_({
-      ok: true,
-      msg: 'Parabéns, agora você receberá as nossas atualizações frequentes, fique de olho no e-mail.'
-    });
+    sendConfirmation_(nome, email, token);
+    return reply_({ ok: true, msg: 'Recebemos sua solicitação. Confira seu e-mail e confirme a assinatura para começar a receber as atualizações.' });
 
   } catch (err) {
     return reply_({ ok: false, msg: 'Erro interno ao processar a assinatura. Tente novamente mais tarde.' });
@@ -133,11 +158,25 @@ function doGet(e) {
       'Você não receberá mais os e-mails do Radar de Editais. Se quiser voltar, é só assinar novamente pelo painel.');
   }
 
-  /* Listar assinantes ativos (protegido por chave — usado pelo send_newsletter.py) */
-  if (p.action === 'list') {
+  /* API protegida usada pelo envio: lista, consulta e registra entregas. */
+  if (p.action === 'list' || p.action === 'sent' || p.action === 'record_sent') {
     if (!API_KEY || !p.key || p.key !== API_KEY) {
-      return ContentService.createTextOutput(JSON.stringify({ error: 'nao_autorizado' }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return apiReply_({ error: 'nao_autorizado' });
+    }
+    if (p.action === 'sent') return apiReply_({ emails: sentEmails_(String(p.edition || '')) });
+    if (p.action === 'record_sent') {
+      var edition = String(p.edition || '').trim();
+      var deliveryEmail = String(p.email || '').trim().toLowerCase();
+      if (!edition || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(deliveryEmail)) return apiReply_({ error: 'dados_invalidos' });
+      var lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        var alreadySent = sentEmails_(edition);
+        if (alreadySent.indexOf(deliveryEmail) === -1) deliveriesSheet_().appendRow([edition, deliveryEmail, new Date()]);
+      } finally {
+        lock.releaseLock();
+      }
+      return apiReply_({ ok: true });
     }
     var r = rows_();
     var out = [];
@@ -150,8 +189,7 @@ function doGet(e) {
         });
       }
     }
-    return ContentService.createTextOutput(JSON.stringify({ assinantes: out }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return apiReply_({ assinantes: out });
   }
 
   return page_('Newsletter — Radar de Editais', 'Serviço de assinatura ativo. Use o painel do Radar de Editais para assinar.');

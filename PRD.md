@@ -19,7 +19,7 @@ index.html + js/newsletter.js
         │ POST em iframe oculto
         ▼
 Google Apps Script + Google Sheets
-        │ double opt-in / cancelamento / lista de assinantes ativos
+        │ double opt-in / cancelamento / lista de assinantes ativos / registro de entregas
         ▼
 scripts/send_newsletter.py + Gmail SMTP
         │
@@ -38,7 +38,7 @@ Digest HTML e texto gerado de data/editais.json
 - [x] Adicionar respeito a `prefers-reduced-motion` para a animação do CTA.
 - [x] Criar backend Google Apps Script com double opt-in, cancelamento e proteção da lista por chave.
 - [x] Criar template de e-mail HTML e versão em texto simples com identidade SENAI.
-- [x] Criar script de prévia, teste individual, envio em lote e log anti-duplicata.
+- [x] Criar script de prévia, teste individual, envio em lote e registro remoto anti-duplicata.
 - [x] Manter segredos fora do Git com variáveis de ambiente e arquivo local ignorado.
 - [x] Atualizar o gerador de HTML estático com o formulário e CTA.
 - [x] Validar a sintaxe de JavaScript e Python e gerar a prévia local do e-mail.
@@ -91,7 +91,7 @@ git push
 Após o `git push`, o workflow `.github/workflows/send-newsletter.yml` envia
 automaticamente o digest somente quando `data/editais.json` foi alterado.
 
-Revise o arquivo em `newsletter/preview_YYYY-MM-DD.html` antes do envio. O script evita envio duplicado da mesma edição e respeita o limite de lote configurado.
+Revise o arquivo em `newsletter/preview_YYYY-MM-DD.html` antes do envio. O script registra os destinatários na aba privada `Envios newsletter` da planilha, evitando duplicidade entre execuções locais e do GitHub Actions, e respeita o limite de lote configurado.
 
 ## Melhorias futuras
 
