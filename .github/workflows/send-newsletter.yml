@@ -1,6 +1,13 @@
 name: Enviar newsletter após atualização da base
 
 on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Simular o envio sem disparar e-mails'
+        required: true
+        default: true
+        type: boolean
   push:
     branches: [main]
     paths:
@@ -28,4 +35,9 @@ jobs:
           python-version: '3.12'
 
       - name: Enviar digest aos assinantes ativos
-        run: python scripts/send_newsletter.py --send
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
+            python scripts/send_newsletter.py --send --dry-run
+          else
+            python scripts/send_newsletter.py --send
+          fi

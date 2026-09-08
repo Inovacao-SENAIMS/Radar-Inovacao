@@ -85,6 +85,7 @@ ficam em variáveis de ambiente (`GMAIL_USER`, `GMAIL_APP_PASSWORD`,
 essas mesmas três variáveis em **Settings → Secrets and variables → Actions**
 do repositório GitHub. O workflow só é disparado por alterações em
 `data/editais.json`; ajustes visuais, textos e código não enviam e-mails.
+Também é possível iniciá-lo em **Actions → Enviar newsletter após atualização da base → Run workflow**: mantenha **Simular o envio sem disparar e-mails** marcado para validar a integração com segurança.
 
 ### Gerar HTML estático (opcional)
 
