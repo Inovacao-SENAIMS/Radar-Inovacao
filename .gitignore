@@ -37,3 +37,11 @@ newsletter/
 
 # Newsletter — segredos locais (preferir variáveis de ambiente)
 scripts/newsletter_secrets.json
+
+#Tests — saídas de teste (cobertura, relatórios, etc.)
+tests/output/
+tests/
+
+#Imagens — saídas de processamento de imagens (pré-visualizações, thumbnails, etc.)
+images/
+images/output/

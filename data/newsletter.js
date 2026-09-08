@@ -3,7 +3,7 @@
 window.NEWSLETTER_CONFIG = {
   /* URL do Web App do Apps Script (ex.: https://script.google.com/macros/s/AKfyc.../exec).
      Vazio = modo fallback: o formulário compõe um e-mail (mailto) para `contactEmail`. */
-  webappUrl: "https://script.google.com/macros/s/AKfycbxK6_Kr9BYTvneTa7mK4gT6PR9ju-Eg3K5jJd9o26_QiXd6evF_sr_8kw1ybFNXoEU/exec",
+  webappUrl: "https://script.google.com/macros/s/AKfycbxS5cxFHkP7ADc2MxAg2lXApKdk3spQ3a2Z18yvEMv2MhJiqavsxSEQiTxD8lSsBkXF/exec",
 
   /* E-mail de contato usado no fallback (mailto) quando o backend não está configurado. */
   contactEmail: "",

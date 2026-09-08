@@ -1,6 +1,6 @@
 {
   "_comentario": "Configuração NÃO-secreta da newsletter. Segredos ficam em variáveis de ambiente (GMAIL_USER, GMAIL_APP_PASSWORD, NEWSLETTER_API_KEY) ou em scripts/newsletter_secrets.json (gitignored). Passo a passo no PRD.md.",
-  "webapp_url": "https://script.google.com/macros/s/AKfycbxK6_Kr9BYTvneTa7mK4gT6PR9ju-Eg3K5jJd9o26_QiXd6evF_sr_8kw1ybFNXoEU/exec",
+  "webapp_url": "https://script.google.com/macros/s/AKfycbxS5cxFHkP7ADc2MxAg2lXApKdk3spQ3a2Z18yvEMv2MhJiqavsxSEQiTxD8lSsBkXF/exec",
   "site_url": "https://ldanill01.github.io/monitor-editais/",
   "sender_name": "Radar de Editais — SENAI MS",
   "smtp_host": "smtp.gmail.com",
