@@ -82,7 +82,7 @@ No Gmail, a senha de app exige autenticação em duas etapas. Como alternativa l
 ## Operação semanal
 
 ```zsh
-python3 scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-01.md data/editais.json
+python3 scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-08.md data/editais.json
 python3 scripts/send_newsletter.py --preview
 python3 scripts/send_newsletter.py --test-to seu@email.com
 git push

@@ -19,7 +19,7 @@ index.html                                      (thin shell — no hardcoded dat
 1. **Edit the `.md`** with new editais/data (or edit `data/editais.json` directly).
 2. **Regenerate JSON + JS from markdown** (if you edited the .md):
    ```powershell
-   python scripts/md_to_json.py Monitoramento_Editais_Inovacao_2026-08-24.md data/editais.json
+   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-08.md data/editais.json
    ```
    This generates both `data/editais.json` and `data/editais.js`.
 3. **Publish + send the newsletter digest** (optional — requires one-time setup, see `PRD.md`):

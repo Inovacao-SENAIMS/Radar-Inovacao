@@ -67,7 +67,7 @@ newsletter → Gmail SMTP                       (digest para assinantes)
 1. Editar o `.md` com novos editais
 2. Executar:
    ```powershell
-   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-08-24.md data/editais.json
+   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-08.md data/editais.json
    ```
 3. Abrir `index.html` no navegador
 

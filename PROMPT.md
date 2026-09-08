@@ -18,7 +18,7 @@ index.html                                      (shell — sem dados hardcoded)
 ```powershell
 # 1. Editar o .md com novos editais
 # 2. Regerar JSON a partir do markdown:
-python scripts/md_to_json.py Monitoramento_Editais_Inovacao_2026-08-24.md data/editais.json
+python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-08.md data/editais.json
 
 # 3. (opcional) Gerar HTML estático autocontido:
 python scripts/render_static.py data/editais.json index.html
