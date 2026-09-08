@@ -1,0 +1,31 @@
+name: Enviar newsletter após atualização da base
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/editais.json'
+
+concurrency:
+  group: newsletter-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    env:
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      NEWSLETTER_API_KEY: ${{ secrets.NEWSLETTER_API_KEY }}
+
+    steps:
+      - name: Baixar versão publicada
+        uses: actions/checkout@v6
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Enviar digest aos assinantes ativos
+        run: python scripts/send_newsletter.py --send

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar — Editais de Inovação | SENAI MS</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- FUNDO LOGOS SENAI -->
+<div class="geo-bg" aria-hidden="true">
+  <div class="geo g1"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g2"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g3"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g4"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g5"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g6"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g7"><img src="assets/logo-senai-fiems.png" alt=""></div>
+  <div class="geo g8"><img src="assets/logo-senai-fiems.png" alt=""></div>
+</div>
+
+<!-- NAV -->
+<nav class="docnav" aria-label="Navegação do relatório">
+  <div class="wrap">
+    <a class="brandmark" href="#">
+      <img src="assets/logo-senai-fiems.png" alt="SENAI MS — Sistema FIEMS">
+      <span class="sys">Radar · Editais</span>
+    </a>
+    <nav id="nav-menu" aria-label="Seções"></nav>
+    <a class="newsletter-cta" href="#newsletter" aria-label="Assinar a newsletter do Radar de Editais">
+      <span aria-hidden="true">✉</span>
+      Newsletter
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+  </div>
+</nav>
+<div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+<!-- CONTENT (rendered from data/editais.js) -->
+<main></main>
+
+<footer class="footer"><p>SENAI MS · Sistema FIEMS · 2026</p></footer>
+
+<!-- DADOS (gerado por scripts/md_to_json.py) -->
+<script src="data/editais.js"></script>
+<!-- CONFIG DA NEWSLETTER (editar data/newsletter.js) -->
+<script src="data/newsletter.js"></script>
+<!-- MÓDULOS -->
+<script src="js/render.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/newsletter.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

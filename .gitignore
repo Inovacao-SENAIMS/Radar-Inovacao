@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (caso adicione no futuro)
+node_modules/
+package-lock.json
+
+# Design assets grandes (manter fora do repo)
+.design/
+
+# Temp
+*.tmp
+*.bak
+*.log
+
+# Newsletter — saídas locais (pré-visualizações e log de envio)
+newsletter/
+
+# Newsletter — segredos locais (preferir variáveis de ambiente)
+scripts/newsletter_secrets.json

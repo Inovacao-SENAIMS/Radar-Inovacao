@@ -1,0 +1,89 @@
+/* ==========================================================
+   Design System — SENAI MS (Sistema FIEMS)
+   Fonte: Design Systems\temas_claros\Senai\design-system-senai-ms 1.html
+   + tokens.css original — unificado para o site
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap');
+
+:root{
+  /* ===== Cores SENAI (tokens.css) — compat ===== */
+  --brand-primary:#003876;
+  --brand-primary-600:#00529B;
+  --brand-primary-400:#3B7FC4;
+  --brand-accent:#E84910;
+  --brand-accent-dark:#B8380C;
+  --brand-accent-soft:#FCE9E0;
+
+  /* ===== Institucional (design-system-senai-ms 1.html) ===== */
+  --blue-900:#0E2C63;
+  --blue-800:#123675;
+  --blue-700:#164194;
+  --blue-600:#1B52B8;
+  --blue-500:#008BD2;
+  --blue-100:#E4EFFB;
+  --blue-50:#F2F7FD;
+
+  --orange-700:#B6390C;
+  --orange-600:#CF4110;
+  --orange-500:#E84910;
+  --orange-400:#F06B37;
+  --orange-100:#FCE3D7;
+  --orange-50:#FEF1EA;
+
+  /* Aliases semânticos */
+  --brand:var(--blue-700);
+  --brand-600:var(--blue-600);
+  --brand-400:var(--blue-500);
+  --accent:var(--orange-500);
+  --accent-dark:var(--orange-700);
+  --accent-soft:var(--orange-50);
+
+  /* Neutros */
+  --n-900:#131C2E;
+  --n-800:#232E45;
+  --n-700:#3B475F;
+  --n-600:#5A667D;
+  --n-500:#7C879C;
+  --n-400:#A6AFBE;
+  --n-300:#CBD2DC;
+  --n-200:#E3E7ED;
+  --n-100:#EFF2F6;
+  --n-50:#F7F9FB;
+  --n-0:#FFFFFF;
+
+  --ink:var(--n-900);
+  --muted:var(--n-600);
+  --bg:var(--n-50);
+  --surface:var(--n-0);
+  --surface-2:#FBFCFE;
+  --border:var(--n-200);
+  --border-strong:#CBD5E1;
+
+  /* Semânticas */
+  --success:#2E8B4F;
+  --success-bg:#E7F5EB;
+  --warning:#C9820A;
+  --warning-bg:#FBF0DD;
+  --danger:#C22B2B;
+  --danger-bg:#FBE7E7;
+  --info:var(--blue-500);
+  --info-bg:var(--blue-50);
+
+  --sesi-green:#52AE32;
+  --iel-teal:#6CC2BA;
+
+  /* Raio / Sombra / Container */
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:14px;
+  --radius-pill:999px;
+  --shadow-sm:0 1px 2px rgba(19,28,46,.06), 0 1px 1px rgba(19,28,46,.08);
+  --shadow-md:0 4px 12px rgba(19,28,46,.08), 0 1px 2px rgba(19,28,46,.06);
+  --shadow-lg:0 12px 32px rgba(19,28,46,.12), 0 2px 6px rgba(19,28,46,.06);
+
+  --container:1440px;
+  --font-display:'Neo Sans Pro','Montserrat','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --font-body:'Neo Sans Pro','Mulish','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --mono:'SF Mono','Consolas','Menlo',monospace;
+}
