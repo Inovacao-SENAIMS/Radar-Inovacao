@@ -245,6 +245,18 @@ def parse_markdown(text: str) -> dict:
         })
 
     # --- Aderência ---
+    # The table is authoritative for counts. Summary text can contain dates
+    # and other numbers that confuse the legacy regex-based extraction above.
+    data["stats"]["abertos"] = sum(item["status"] == "aberto" for item in data["editais"])
+    data["stats"]["continuos"] = sum(item["status"] == "continuo" for item in data["editais"])
+    data["stats"]["em_breve"] = sum(item["status"] == "breve" for item in data["editais"])
+    data["stats"]["encerram_7d"] = sum(
+        item["status"] == "aberto"
+        and (item["dias"].strip().lower() == "hoje" or item["dias"].strip().lower().startswith("0 (hoje)"))
+        or (item["status"] == "aberto" and item["dias"].strip().isdigit() and int(item["dias"].strip()) <= 7)
+        for item in data["editais"]
+    )
+
     aderencia_lines = find_section(lines, "Aderência com os institutos")
     _, aderencia_rows = parse_table(aderencia_lines)
     for row in aderencia_rows:
