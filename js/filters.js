@@ -1,6 +1,15 @@
 /* filters.js — filter logic for editais and aderencia tables */
 const Filters = (() => {
 
+  function normalizeText(value) {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
   /* ========== Institute mapping (matches by substring in edital name) ========== */
   const mapInst = {
     'Agroindustriais Sustentáveis': ['alimentos', 'biomassa'],
@@ -104,8 +113,8 @@ const Filters = (() => {
       const q = (search?.value || '').trim().toLowerCase();
 
       if (vInst !== 'all') {
-        const instCell = tr.children[1]?.textContent || '';
-        const keywords = instMap[vInst] || [vInst];
+        const instCell = normalizeText(tr.children[1]?.textContent);
+        const keywords = (instMap[vInst] || [vInst]).map(normalizeText);
         if (!keywords.some(kw => instCell.includes(kw))) return false;
       }
       if (vFoco !== 'all') {
@@ -123,8 +132,8 @@ const Filters = (() => {
       if (excludeKey !== 'inst') {
         const vInst = selInst?.value || 'all';
         if (vInst !== 'all') {
-          const instCell = tr.children[1]?.textContent || '';
-          const keywords = instMap[vInst] || [vInst];
+          const instCell = normalizeText(tr.children[1]?.textContent);
+          const keywords = (instMap[vInst] || [vInst]).map(normalizeText);
           if (!keywords.some(kw => instCell.includes(kw))) return false;
         }
       }

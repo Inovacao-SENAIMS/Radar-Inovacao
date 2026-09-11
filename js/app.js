@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // build mobile cards
     const editaisHeaders = ['Edital', 'Fonte', 'Status', 'Abertura', 'Encerramento', 'Dias', 'Público-alvo', 'Valor / Faixa', 'Contrapartida', 'Principais exigências', 'Link'];
-    const aderenciaHeaders = ['Edital', 'Instituto(s) com maior aderência', 'Grau', 'Foco educacional?', 'Justificativa'];
+    const aderenciaHeaders = ['Edital', 'Instituto(s) com maior aderência', 'Grau', 'Foco educacional?', 'Justificativa', 'Link'];
     buildCards('tbl-editais', 'cards-editais', editaisHeaders);
     buildCards('tbl-aderencia', 'cards-aderencia', aderenciaHeaders);
 

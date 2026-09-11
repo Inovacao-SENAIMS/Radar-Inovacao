@@ -162,6 +162,16 @@ const Render = (() => {
       const encerramento = item.Encerramento || item.encerramento || '';
       const motivo = item.Motivo || item.motivo || '';
       const alteracao = item.Alteração || item.alteracao || '';
+      const editalName = item.Edital || item.edital || '';
+      const noveltyLinks = {
+        'Programa Desafios da Amazônia (Amazônia+10)': 'https://www.amazonfund.gov.br/pt/como-apresentar-projetos/chamadas-publicas/programa-desafios-da-amazonia/',
+        'FAPESP PIPE Jornada Tecnológica – Transição Energética (Fase 1)': 'https://fapesp.br/18291/chamada-de-propostas-para-o-programa-pipe-jornada-tecnologica-transicao-energetica-fase-1',
+        'FINEP Mais Inovação Brasil R2 – Transição Energética': 'https://www.finep.gov.br/chamadas-publicas/chamadapublica/772',
+        'FAPESP – JSPS Japão 2026 (Projetos Conjuntos)': 'https://fapesp.br/index.php/18319/chamada-conjunta-de-propostas-sociedade-japonesa-para-a-promocao-da-ciencia-jsps-e-fundacao-de-amparo-a-pesquisa-do-estado-de-sao-paulo-fapesp-2026',
+        'Observatório Nacional – Bolsas de Doutorado RSBR 2026': 'https://www.gov.br/observatorio/pt-br/assuntos/noticias/observatorio-nacional-lanca-edital-para-selecao-de-bolsista-em-projeto-da-rede-sismografica-brasileira',
+        'FAPERJ nº 12/2026 – Centelha 3 RJ': 'https://www.faperj.br/?id=28.5.7',
+      };
+      const directLink = item.Link || item.link || noveltyLinks[editalName] || data.editais?.find(e => e.edital === editalName || e.edital.startsWith(editalName))?.link || '';
 
       if (fonte) tags.push(el('span', { class: 'nov-tag', text: fonte }));
       if (abertura) tags.push(el('span', { class: 'nov-tag nov-tag--muted', text: 'Abre: ' + abertura }));
@@ -170,16 +180,16 @@ const Render = (() => {
 
       return el('div', { class: 'nov-card' }, [
         el('div', { class: 'nov-card__head' }, [
-          el('div', { class: 'nov-card__title', text: item.Edital || item.edital || '' }),
+          el('div', { class: 'nov-card__title', text: editalName }),
           el('span', { class: tag.cls, text: tag.label }),
         ]),
         el('div', { class: 'nov-card__tags' }, tags),
         el('div', { class: 'nov-card__body', text: destaque }),
-        encerramento ? el('div', { class: 'nov-card__footer' }, [
-          el('span', { class: 'nov-deadline' }, [
-            el('b', { text: 'Encerramento: ' }),
-            document.createTextNode(encerramento),
-          ]),
+        (encerramento || directLink) ? el('div', { class: 'nov-card__footer' }, [
+          encerramento ? el('span', { class: 'nov-deadline' }, [
+            ...(encerramento ? [el('b', { text: 'Encerramento: ' }), document.createTextNode(encerramento)] : []),
+          ]) : null,
+          directLink ? el('a', { class: 'nov-card__link', href: directLink, target: '_blank', rel: 'noopener', text: 'Acessar edital' }) : null,
         ]) : null,
       ]);
     });
@@ -318,16 +328,18 @@ const Render = (() => {
 
   /* ========== Aderência ========== */
   function aderenciaSection(data) {
-    const headers = ['Edital', 'Instituto(s) com maior aderência', 'Grau', 'Foco educacional?', 'Justificativa'];
+    const headers = ['Edital', 'Instituto(s) com maior aderência', 'Grau', 'Foco educacional?', 'Justificativa', 'Link'];
     const thead = el('thead', {}, [el('tr', {}, headers.map(h => el('th', { text: h })))]);
     const tbody = el('tbody', {});
     data.aderencia.filter(a => a.grau !== 'none' && a.institutos && a.institutos.trim() !== '—').forEach(a => {
+      const link = data.editais?.find(e => e.edital === a.edital || e.edital.startsWith(a.edital))?.link || '';
       const tr = el('tr', { 'data-g': a.grau }, [
         el('td', { class: 'edital', text: a.edital }),
         el('td', { class: 'src', text: a.institutos }),
         el('td', {}, [gradeBadge(a.grau)]),
         el('td', { text: a.foco_educacional }),
         el('td', { text: a.justificativa }),
+        el('td', {}, link ? [el('a', { class: 'link', href: link, target: '_blank', rel: 'noopener', text: 'Link' })] : []),
       ]);
       tbody.appendChild(tr);
     });
@@ -391,14 +403,22 @@ const Render = (() => {
 
   /* ========== Não Confirmado ========== */
   function naoConfirmadoSection(data) {
-    const headers = ['Edital', 'Fonte', 'Motivo'];
+    const headers = ['Edital', 'Fonte', 'Motivo', 'Link'];
     const thead = el('thead', {}, [el('tr', {}, headers.map(h => el('th', { text: h })))]);
     const tbody = el('tbody', {});
+    const links = {
+      'FAPERJ nº 07/2026 – Agro do Futuro': 'https://www.faperj.br/rp/downloads/Edital_FAPERJ_N%C2%BA07_2026_Programa_Agro_do_Futuro_%E2%80%93_Tecnologia_e_Soberania_Alimentar_%28Foodtechs_e_Agritechs%29.pdf',
+      'MCTI/FINEP – Conhecimento Brasil (R$ 500 mi)': 'https://www.finep.gov.br/chamadas-publicas/chamadapublica/745',
+      'FUNDECT-MS nº 01/2026 – Centelha MS (3ª edição)': 'https://www.fundect.ms.gov.br/wp-content/uploads/2026/03/Programa-Centelha-3-MS.pdf',
+      'InovAtiva Brasil 2026 (2º semestre)': 'https://www.gov.br/mdic/pt-br/acesso-a-informacao/perguntas-frequentes-faq/secretaria-de-desenvolvimento-industrial-inovacao-comercio-e-servicos/quem-pode-se-inscrever-e',
+    };
     data.nao_confirmado.forEach(n => {
+      const link = n.link || links[n.edital] || '';
       tbody.appendChild(el('tr', {}, [
         el('td', { class: 'edital', text: n.edital }),
         el('td', { class: 'src', text: n.fonte }),
         el('td', { text: n.motivo }),
+        el('td', {}, link ? [el('a', { class: 'link', href: link, target: '_blank', rel: 'noopener', text: 'Link' })] : []),
       ]));
     });
     const table = el('table', {}, [thead, tbody]);
