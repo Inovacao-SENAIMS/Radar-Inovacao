@@ -31,7 +31,7 @@
 
 /* ============================ CONFIGURAÇÃO ============================ */
 var API_KEY  = PropertiesService.getScriptProperties().getProperty('NEWSLETTER_API_KEY') || '';
-var SITE_URL = 'https://ldanill01.github.io/monitor-editais/';
+var SITE_URL = 'https://inovacao-senaims.github.io/Radar-Inovacao/';
 var SENDER_NAME = 'Radar de Editais — SENAI MS';
 var SHEET_NAME = 'Assinantes';
 var DELIVERIES_SHEET_NAME = 'Envios newsletter';

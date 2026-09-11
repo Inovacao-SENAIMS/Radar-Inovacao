@@ -6,7 +6,7 @@
     "methodology": "Pesquisa e revalidação em fontes oficiais em 11/09/2026; status e prazos comparados com a data do sistema. Campos ausentes foram mantidos como Não encontrado ou —."
   },
   "stats": {
-    "abertos": 30,
+    "abertos": 31,
     "continuos": 5,
     "em_breve": 3,
     "encerram_7d": 7,
@@ -48,6 +48,13 @@
         "Abertura": "20/08/2026",
         "Encerramento": "28/09/2026",
         "Destaque": "Não encontrado"
+      },
+      {
+        "Edital": "Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows",
+        "Fonte": "Grand Challenges (Gates/Temasek/UN Foundation)",
+        "Abertura": "18/08/2026",
+        "Encerramento": "29/09/2026",
+        "Destaque": "Até US$ 800 mil/projeto; sequenciamento de patógenos de baixo custo para países de renda baixa e média"
       }
     ],
     "editais_encerrados": [
@@ -92,7 +99,7 @@
     ]
   },
   "resumo_executivo": [
-    "Abertos agora: 30 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.",
+    "Abertos agora: 31 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.",
     "Em breve: 3 chamadas com abertura programada.",
     "Alerta (encerramento em ≤ 7 dias): 7 editais fecham até 18/09: Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).",
     "Não confirmado: 6 itens permanecem sem cronograma oficial claro após busca aprofundada; estão listados ao final."
@@ -307,6 +314,21 @@
       "contrapartida": "Não encontrado",
       "exigencias": "Formulário eletrônico; proposta conjunta; 3 a 10 grupos de aprendizagem; Anexos I e II",
       "link": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-conjunto-no-1-2026-seidigi-sgtes",
+      "grupo": null
+    },
+    {
+      "edital": "Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows",
+      "fonte": "Grand Challenges (Gates/Temasek/UN Foundation)",
+      "status": "aberto",
+      "abertura": "18/08/2026",
+      "encerramento": "29/09/2026",
+      "dias": "18",
+      "tipo_publico": "Empresa",
+      "publico": "Institutos de pesquisa, organizações sem fins lucrativos, empresas, órgãos governamentais e instituições acadêmicas em países de renda baixa e média",
+      "valor": "Até US$ 300 mil (nível 1), US$ 600 mil (nível 2) ou US$ 800 mil (nível 3)",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Fluxos de sequenciamento de patógenos; pessoas físicas não elegíveis; solução aplicável à saúde pública em países de renda baixa e média",
+      "link": "https://gcgh.grandchallenges.org/challenge/innovations-low-cost-and-simplified-pathogen-sequencing-workflows",
       "grupo": null
     },
     {
@@ -817,6 +839,13 @@
       "grau": "media",
       "foco_educacional": "Não",
       "justificativa": "Biodiversidade, biotech e transição energética alinham-se; restrito a SP/Ohio."
+    },
+    {
+      "edital": "Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows",
+      "institutos": "IST Alimentos; ISI Biomassa",
+      "grau": "alta",
+      "foco_educacional": "Não",
+      "justificativa": "Sequenciamento de patógenos e biotecnologia aplicada à saúde pública têm aderência ao conhecimento laboratorial do IST Alimentos e à biotecnologia do ISI Biomassa; elegibilidade internacional deve ser conferida no RFP."
     },
     {
       "edital": "FAPESP – PRONEX 40/2026 (Redes de Excelência)",

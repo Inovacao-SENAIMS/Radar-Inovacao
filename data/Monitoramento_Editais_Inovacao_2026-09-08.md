@@ -14,6 +14,7 @@
 | Observatório Nacional – Bolsas de Doutorado RSBR 2026 | Observatório Nacional/MCTI | 02/09/2026 | 08/09/2026 | 2 bolsas de R$ 6,5 mil/mês por 14 meses |
 | FAPERJ – Chamada CONFAP–WBI Bélgica 2026 | FAPERJ/CONFAP/WBI | 22/06/2026 | 30/09/2026 | Até 4 bolsas de mobilidade internacional por projeto; deslocamento de R$ 9 mil e seguro |
 | PET Saúde Informação e Saúde Digital (Edital Conjunto SEIDIGI/SGTES-MS nº 1/2026) | Ministério da Saúde | 20/08/2026 | 28/09/2026 | Não encontrado |
+| Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows | Grand Challenges (Gates/Temasek/UN Foundation) | 18/08/2026 | 29/09/2026 | Até US$ 800 mil/projeto; sequenciamento de patógenos de baixo custo para países de renda baixa e média |
 
 ### Editais encerrados desde 01/09
 
@@ -35,7 +36,7 @@
 
 ## Resumo Executivo
 
-- **Abertos agora:** 30 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.
+- **Abertos agora:** 31 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.
 - **Em breve:** 3 chamadas com abertura programada.
 - **Alerta (encerramento em ≤ 7 dias):** 7 editais fecham até 18/09: Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).
 - **Não confirmado:** 6 itens permanecem sem cronograma oficial claro após busca aprofundada; estão listados ao final.
@@ -60,6 +61,7 @@
 | FUNDECT-MS nº 13/2026 – PICTEC MS (6ª edição) | FUNDECT/SEMADESC-MS | Aberto | 03/07/2026 | 25/09/2026 | 14 | Professores/orientadores + estudantes escolas públicas MS | R$ 7,2 mi (até 1.000 bolsas) | Não exige | SIGFUNDECT; Lattes; anuência | https://www.fundect.ms.gov.br/informativos/consultas/ |
 | FAPESP PIPE Jornada Tecnológica 1ª Rodada 2026 (Fase 1) | FAPESP | Aberto | 29/06/2026 | 28/09/2026 | 17 | Pequenas empresas de SP | Até R$ 500 mil/projeto | Não exige | SAGe; empresa paulista | https://fapesp.br/18243/chamada-de-propostas-para-o-programa-pipe-jornada-tecnologica-1a-rodada-2026-fase-1 |
 | PET Saúde Informação e Saúde Digital (Edital Conjunto SEIDIGI/SGTES-MS nº 1/2026) | Ministério da Saúde | Aberto | 20/08/2026 | 28/09/2026 | 17 | Institutos Federais de Educação, Ciência e Tecnologia em parceria com secretarias de saúde | Não encontrado | Não encontrado | Formulário eletrônico; proposta conjunta; 3 a 10 grupos de aprendizagem; Anexos I e II | https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-conjunto-no-1-2026-seidigi-sgtes |
+| Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows | Grand Challenges (Gates/Temasek/UN Foundation) | Aberto | 18/08/2026 | 29/09/2026 | 18 | Institutos de pesquisa, organizações sem fins lucrativos, empresas, órgãos governamentais e instituições acadêmicas em países de renda baixa e média | Até US$ 300 mil (nível 1), US$ 600 mil (nível 2) ou US$ 800 mil (nível 3) | Não encontrado | Fluxos de sequenciamento de patógenos; pessoas físicas não elegíveis; solução aplicável à saúde pública em países de renda baixa e média | https://gcgh.grandchallenges.org/challenge/innovations-low-cost-and-simplified-pathogen-sequencing-workflows |
 | CNPq nº 20/2026 – Atlânticas (Mulheres na Ciência) | CNPq/MCTI/MMulheres | Aberto | 30/06/2026 | 30/09/2026 | 19 | Pessoa física (mulheres negras/quilombolas/indígenas/ciganas) | Bolsas DT&I no exterior | Não exige | Formulário PICC | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-20-2026/chamada-publica-cnpq-N-20-2026 |
 | CNPq nº 21/2026 – ERC-CONFAP (Projetos com Conselho Europeu de Pesquisa) | CNPq/ERC | Aberto | 11/08/2026 | 30/09/2026 | 19 | Pesquisadores BR + ERC | Não encontrado | Não exige | Manifestação de Interesse + PICC | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-21-2026/chamada-publica-cnpq-N-21-2026 |
 | FAPERJ – Chamada CONFAP–WBI Bélgica 2026 | FAPERJ/CONFAP/WBI | Aberto | 22/06/2026 | 30/09/2026 | 19 | Pesquisadores doutores vinculados a instituições de ensino e pesquisa do RJ, com equipe belga | Até 4 bolsas de mobilidade internacional por projeto; deslocamento de R$ 9 mil e seguro | Cooperação Brasil–Bélgica | Projeto conjunto; submissão na plataforma parceira; elegibilidade estadual do RJ | https://confap.org.br/pt/editais/111/chamada-confap-wbi-belgica-2026 |
@@ -121,6 +123,7 @@
 | PET Saúde Informação e Saúde Digital (Edital Conjunto SEIDIGI/SGTES-MS nº 1/2026) | — | Baixa | Sim | Combina educação, pesquisa e inovação em saúde digital para o SUS, mas é restrito a Institutos Federais em parceria com secretarias de saúde e não se conecta diretamente ao escopo industrial dos institutos. |
 | FAPESP – Biorrefinarias Integradas NWO 2026 | ISI Biomassa | Alta | Não | Biorrefinarias integradas para futuro circular; alinhamento direto com ISI Biomassa. |
 | FAPESP – Ohio State University Joint Call 2026 | ISI Biomassa; IST Alimentos | Média | Não | Biodiversidade, biotech e transição energética alinham-se; restrito a SP/Ohio. |
+| Grand Challenges – Innovations in Low-Cost and Simplified Pathogen Sequencing Workflows | IST Alimentos; ISI Biomassa | Alta | Não | Sequenciamento de patógenos e biotecnologia aplicada à saúde pública têm aderência ao conhecimento laboratorial do IST Alimentos e à biotecnologia do ISI Biomassa; elegibilidade internacional deve ser conferida no RFP. |
 | FAPESP – PRONEX 40/2026 (Redes de Excelência) | — | Baixa | Não | Redes de excelência em SP; parceria ICT possível, mas fora de MS. |
 | FICA-SP – Fixação e Incentivo à Carreira Acadêmica em São Paulo (Ciclo 1) | IST Alimentos; IST Eficiência Operacional; ISI Biomassa | Média | Não | Abrange linhas estratégicas de alimentos, biotecnologia, energia e transição digital, mas é restrito a ICTs/IES de São Paulo. |
 | FINEP Mais Inovação Brasil R2 – Base Industrial de Defesa | IST Eficiência Operacional | Baixa | Não | Defesa nacional fora do escopo direto dos IST de MS. |
@@ -142,5 +145,5 @@
 ## Observações de método
 
 > A busca mantém escopo amplo; a aderência é uma camada de sinalização e não exclui editais da tabela principal.
-> Fontes oficiais consultadas nesta rodada: CGU, FAPES/ES, Finep, FAPERJ, BNDES, CNPq/MCTI, Ministério da Saúde, FAPESP e Horizon Europe/CONFAP. Prazos foram reclassificados pela data de referência de 11/09/2026.
+> Fontes oficiais consultadas nesta rodada: CGU, FAPES/ES, Finep, FAPERJ, BNDES, CNPq/MCTI, Ministério da Saúde, FAPESP, Grand Challenges e Horizon Europe/CONFAP. Prazos foram reclassificados pela data de referência de 11/09/2026.
 > O prazo de cadastro prévio da chamada Brasil–Noruega foi 02/09; a submissão internacional segue até 09/09. Confirme a elegibilidade cadastral antes de submeter.

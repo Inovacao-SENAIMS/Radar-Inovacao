@@ -9,5 +9,5 @@ window.NEWSLETTER_CONFIG = {
   contactEmail: "",
 
   /* URL pública do site (GitHub Pages). Usada no e-mail para logo e botão "Ver painel". */
-  siteUrl: "https://ldanill01.github.io/monitor-editais/"
+  siteUrl: "https://inovacao-senaims.github.io/Radar-Inovacao/"
 };
