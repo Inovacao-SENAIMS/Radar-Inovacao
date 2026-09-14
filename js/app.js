@@ -32,35 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navMenu?.classList.contains('open') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) closeNav();
   });
 
-  /* ========== Drawer (filtros editais) ========== */
-  const backdrop = document.getElementById('drawer-backdrop');
-  const sidebar = document.getElementById('sidebar');
-  const fab = document.getElementById('fab-filtros');
-  const drawerClose = document.getElementById('drawer-close');
-
-  function isMobileDrawer() { return window.innerWidth <= 1100; }
-
-  function openDrawer() {
-    if (!sidebar) return;
-    sidebar.classList.add('open');
-    if (backdrop) backdrop.classList.add('open');
-    if (fab) fab.setAttribute('aria-expanded', 'true');
-    if (isMobileDrawer()) document.body.style.overflow = 'hidden';
-  }
-  function closeDrawer() {
-    if (!sidebar) return;
-    sidebar.classList.remove('open');
-    if (backdrop) backdrop.classList.remove('open');
-    if (fab) fab.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-
-  if (fab) fab.addEventListener('click', () => sidebar?.classList.contains('open') ? closeDrawer() : openDrawer());
-  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-  if (backdrop) backdrop.addEventListener('click', () => { closeDrawer(); closeNav(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDrawer(); closeNav(); } });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 1100) { if (backdrop) backdrop.classList.remove('open'); document.body.style.overflow = ''; }
     if (window.innerWidth > 760) closeNav();
   });
 
@@ -127,12 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========== Init: render from embedded data ========== */
   function init(data) {
     Render.build(data);
+    Filters.setupNovidades();
 
     // re-bind nav links (DOM was replaced)
     document.querySelectorAll('.docnav nav a').forEach(a => a.addEventListener('click', closeNav));
 
     // build mobile cards
-    const editaisHeaders = ['Edital', 'Fonte', 'Status', 'Abertura', 'Encerramento', 'Dias', 'Público-alvo', 'Valor / Faixa', 'Contrapartida', 'Principais exigências', 'Link'];
+    const editaisHeaders = ['Edital', 'Fonte', 'Status', 'Abertura', 'Encerramento', 'Público-alvo', 'Valor / Faixa', 'Contrapartida', 'Principais exigências', 'Link'];
     const aderenciaHeaders = ['Edital', 'Instituto(s) com maior aderência', 'Grau', 'Foco educacional?', 'Justificativa', 'Link'];
     buildCards('tbl-editais', 'cards-editais', editaisHeaders);
     buildCards('tbl-aderencia', 'cards-aderencia', aderenciaHeaders);

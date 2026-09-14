@@ -109,15 +109,6 @@ const Render = (() => {
         ]),
       ]));
     }
-    if (n.editais_encerrados?.length) {
-      statsItems.push(el('div', { class: 'nov-stat nov-stat--closed' }, [
-        el('div', { class: 'nov-stat__icon', html: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>' }),
-        el('div', { class: 'nov-stat__info' }, [
-          el('div', { class: 'nov-stat__n', text: String(n.editais_encerrados.length) }),
-          el('div', { class: 'nov-stat__l', text: 'Encerrados' }),
-        ]),
-      ]));
-    }
     if (n.alteracoes_prazo?.length) {
       statsItems.push(el('div', { class: 'nov-stat nov-stat--changed' }, [
         el('div', { class: 'nov-stat__icon', html: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' }),
@@ -201,6 +192,7 @@ const Render = (() => {
         ]),
         el('div', { class: 'nov-stats' }, statsItems),
         el('div', { class: 'nov-cards' }, cards),
+        el('div', { class: 'pagination', id: 'pagination-novidades', 'aria-label': 'Paginação da seção Novidades' }),
       ]),
     ]);
   }
@@ -208,19 +200,17 @@ const Render = (() => {
   /* ========== Editais table ========== */
   function editaisSection(data) {
     const editais = data.editais;
-    const headers = ['Edital', 'Fonte', 'Status', 'Abertura', 'Encerramento', 'Dias', 'Tipo público', 'Público-alvo', 'Valor', 'Contrapartida', 'Exigências', 'Link'];
+    const headers = ['Edital', 'Fonte', 'Status', 'Abertura', 'Encerramento', 'Público-alvo', 'Valor', 'Contrapartida', 'Exigências', 'Link'];
 
     const thead = el('thead', {}, [el('tr', {}, headers.map(h => el('th', { text: h })))]);
     const tbody = el('tbody', {});
     editais.forEach(e => {
-      const tr = el('tr', { 'data-s': e.status, 'data-tipo': e.tipo_publico || '' }, [
+      const tr = el('tr', { 'data-s': e.status, 'data-tipo': e.tipo_publico || '', 'data-dias': e.dias || '', 'data-publico': e.publico || '', 'data-contrapartida': e.contrapartida || '' }, [
         el('td', { class: `edital${e.status === 'continuo' ? ' edital--cont' : ''}`, text: e.edital }),
         el('td', { class: 'src', text: e.fonte }),
         el('td', {}, [statusPill(e.status)]),
         el('td', { text: e.abertura }),
         el('td', { text: e.encerramento }),
-        el('td', { class: diasClass(e.dias), text: e.dias.replace(/\*\*/g, '').replace(/\s*\(hoje\)/i, '').trim() }),
-        el('td', { text: e.tipo_publico || '—' }),
         el('td', { text: e.publico }),
         el('td', { text: e.valor }),
         el('td', { text: e.contrapartida }),
@@ -239,67 +229,17 @@ const Render = (() => {
       scrollHint,
       el('div', { class: 'tbl-wrap' }, [table]),
       cards,
+      el('div', { class: 'pagination', id: 'pagination-editais', 'aria-label': 'Paginação da tabela de editais' }),
     ]);
 
-    // filter bar (mobile)
-    const fab = el('button', { id: 'fab-filtros', class: 'fab-filtros', type: 'button', 'aria-controls': 'sidebar', 'aria-expanded': 'false' }, [
-      document.createTextNode('☰ Filtros '),
-      el('span', { class: 'fab-badge', id: 'fab-badge', hidden: 'true', text: '0' }),
-    ]);
-    const countTop = el('span', { class: 'fcount fcount--inline', id: 'count-editais-top' });
-    const toolbar = el('div', { class: 'editais-toolbar' }, [fab, countTop]);
-
-    // sidebar filters
-    const selInst = el('select', { class: 'fselect', id: 'f-inst' }, [
-      el('option', { value: 'all', text: 'Todos' }),
-      el('option', { value: 'alimentos', text: 'IST Alimentos e Bebidas' }),
-      el('option', { value: 'eficiencia', text: 'IST Eficiência Operacional' }),
-      el('option', { value: 'biomassa', text: 'ISI Biomassa' }),
-    ]);
-    const selStatus = el('select', { class: 'fselect', id: 'f-status' }, [
-      el('option', { value: 'all', text: 'Todos' }),
-      el('option', { value: 'aberto', text: 'Aberto' }),
-      el('option', { value: 'breve', text: 'Em breve' }),
-      el('option', { value: 'continuo', text: 'Fluxo contínuo' }),
-    ]);
-    const selDias = el('select', { class: 'fselect', id: 'f-dias' }, [
-      el('option', { value: 'all', text: 'Todos' }),
-      el('option', { value: 'd7', text: '≤ 7 dias' }),
-      el('option', { value: 'd30', text: '8–30 dias' }),
-      el('option', { value: 'd60', text: '31–60 dias' }),
-      el('option', { value: 'd60p', text: '> 60 dias' }),
-      el('option', { value: 'cont', text: 'Contínuo' }),
-    ]);
-    const selTipo = el('select', { class: 'fselect', id: 'f-tipo' }, [
-      el('option', { value: 'all', text: 'Todos' }),
-      el('option', { value: 'Empresa', text: 'Empresa' }),
-      el('option', { value: 'Pessoa Física', text: 'Pessoa Física' }),
-    ]);
-    const selFonte = el('select', { class: 'fselect', id: 'f-fonte' }, [el('option', { value: 'all', text: 'Todos' })]);
-    const selPublico = el('select', { class: 'fselect', id: 'f-publico' }, [el('option', { value: 'all', text: 'Todos' })]);
-    const selContra = el('select', { class: 'fselect', id: 'f-contra' }, [el('option', { value: 'all', text: 'Todos' })]);
     const search = el('input', { class: 'fsearch', id: 'search-editais', type: 'text', placeholder: 'Digite para buscar…' });
-    const reset = el('button', { class: 'freset', id: 'f-reset', type: 'button', text: '↺ Limpar filtros' });
     const count = el('span', { class: 'fcount', id: 'count-editais' });
-
-    const sidebar = el('aside', { class: 'sidebar', id: 'sidebar', 'aria-label': 'Filtros dos editais' }, [
-      el('div', { class: 'sidebar-card', id: 'filt-editais' }, [
-        el('div', { class: 'sidebar-head' }, [
-          el('h3', { text: 'Filtros Avançados' }),
-          el('button', { class: 'drawer-close', id: 'drawer-close', type: 'button', 'aria-label': 'Fechar filtros', text: '×' }),
-        ]),
-        el('div', { class: 'fgrid' }, [
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Institutos Senai' }), selInst]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Status' }), selStatus]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Tipo de público' }), selTipo]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Dias restantes' }), selDias]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Fonte' }), selFonte]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Público-alvo' }), selPublico]),
-          el('div', { class: 'fgroup' }, [el('span', { class: 'glabel', text: 'Contrapartida' }), selContra]),
-          el('div', { class: 'fgroup fgroup--search' }, [el('span', { class: 'glabel', text: 'Busca livre' }), search]),
-        ]),
-        el('div', { class: 'f-actions' }, [reset, count]),
+    const filterBar = el('div', { class: 'filter-inline', id: 'filt-editais' }, [
+      el('div', { class: 'fgroup fgroup--search' }, [
+        el('span', { class: 'glabel', text: 'Busca livre' }),
+        search,
       ]),
+      count,
     ]);
 
     // Build wrap content
@@ -307,11 +247,10 @@ const Render = (() => {
       el('div', { class: 'sec-head' }, [
         el('h2', { text: 'Editais — Aberto | Em breve' }),
         el('p', {}, [
-          document.createTextNode('Ordenado por encerramento mais próximo. Use os filtros abaixo para refinar por instituto SENAI, status, tipo de público, fonte, contrapartida ou prazo.'),
+          document.createTextNode('Ordenado por encerramento mais próximo. Use a busca livre abaixo para localizar editais por nome, fonte, público, valor ou qualquer outro texto da tabela.'),
         ]),
       ]),
-      toolbar,
-      sidebar,
+      filterBar,
       specCard,
     ];
     if (data.alerta_prazo) {
@@ -351,6 +290,7 @@ const Render = (() => {
       scrollHint,
       el('div', { class: 'tbl-wrap' }, [table]),
       cards,
+      el('div', { class: 'pagination', id: 'pagination-aderencia', 'aria-label': 'Paginação da tabela de aderência' }),
     ]);
 
     const filterBar = el('div', { class: 'filter-inline', id: 'filt-aderencia' }, [

@@ -1,6 +1,69 @@
 /* filters.js — filter logic for editais and aderencia tables */
 const Filters = (() => {
 
+  const PAGE_SIZE = 7;
+
+  function paginate(total, page, pageSize = PAGE_SIZE) {
+    const totalPages = Math.max(1, Math.ceil(total / pageSize));
+    const safePage = Math.min(Math.max(1, page), totalPages);
+    return {
+      start: Math.min((safePage - 1) * pageSize, total),
+      end: Math.min(safePage * pageSize, total),
+      totalPages,
+    };
+  }
+
+  function updatePagination(id, total, page, onPageChange, pageSize = PAGE_SIZE) {
+    const container = document.getElementById(id);
+    if (!container) return;
+    const range = paginate(total, page, pageSize);
+    container.innerHTML = '';
+    container.hidden = total <= pageSize;
+    if (container.hidden) return;
+
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.className = 'pagination__button';
+    previous.textContent = 'Anterior';
+    previous.disabled = page <= 1;
+    previous.addEventListener('click', () => onPageChange(page - 1));
+
+    const status = document.createElement('span');
+    status.className = 'pagination__status';
+    status.textContent = 'Página ' + page + ' de ' + range.totalPages;
+    status.setAttribute('aria-live', 'polite');
+
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'pagination__button';
+    next.textContent = 'Próxima';
+    next.disabled = page >= range.totalPages;
+    next.addEventListener('click', () => onPageChange(page + 1));
+
+    container.append(previous, status, next);
+  }
+
+  function setupNovidades() {
+    const cards = Array.from(document.querySelectorAll('#novidades .nov-card'));
+    if (!cards.length) return;
+    const pageSize = 9;
+    let currentPage = 1;
+
+    function apply() {
+      const page = paginate(cards.length, currentPage, pageSize);
+      currentPage = Math.min(currentPage, page.totalPages);
+      cards.forEach((card, index) => {
+        card.hidden = index < page.start || index >= page.end;
+      });
+      updatePagination('pagination-novidades', cards.length, currentPage, pageNumber => {
+        currentPage = pageNumber;
+        apply();
+      }, pageSize);
+    }
+
+    apply();
+  }
+
   function normalizeText(value) {
     return String(value || '')
       .normalize('NFD')
@@ -97,6 +160,7 @@ const Filters = (() => {
     const search = document.getElementById('search-aderencia');
     const count = document.getElementById('count-aderencia');
     const cardsWrap = document.getElementById('cards-aderencia');
+    let currentPage = 1;
     const rows = tbl ? Array.from(tbl.querySelectorAll('tbody tr')) : [];
 
     // Keywords to match each institute (partial matching)
@@ -195,17 +259,24 @@ const Filters = (() => {
 
     function repopulateAll() { repopulateFoco(); repopulateGrau(); }
 
-    function apply() {
-      let vis = 0;
+    function apply(resetPage = true) {
+      if (resetPage) currentPage = 1;
+      const matchingRows = rows.filter(matchRow);
+      const page = paginate(matchingRows.length, currentPage);
+      currentPage = Math.min(currentPage, page.totalPages);
+      const pageRows = new Set(matchingRows.slice(page.start, page.end));
       rows.forEach((tr, i) => {
-        const show = matchRow(tr);
+        const show = pageRows.has(tr);
         tr.classList.toggle('hidden', !show);
         const card = cardsWrap?.children[i];
-        if (card) card.style.display = show ? '' : 'none';
-        if (show) vis++;
+        if (card) card.style.display = matchingRows.includes(tr) && show ? '' : 'none';
       });
       repopulateAll();
-      if (count) count.textContent = vis + ' de ' + rows.length + ' editais aderentes';
+      if (count) count.textContent = matchingRows.length + ' de ' + rows.length + ' editais aderentes';
+      updatePagination('pagination-aderencia', matchingRows.length, currentPage, pageNumber => {
+        currentPage = pageNumber;
+        apply(false);
+      });
     }
 
     [selInst, selFoco, selGrau].forEach(s => s && s.addEventListener('change', apply));
@@ -219,135 +290,40 @@ const Filters = (() => {
     const tbl = document.getElementById('tbl-editais');
     if (!tbl) return;
     const rows = Array.from(tbl.querySelectorAll('tbody tr'));
-    const selInst = document.getElementById('f-inst');
-    const selStatus = document.getElementById('f-status');
-    const selTipo = document.getElementById('f-tipo');
-    const selFonte = document.getElementById('f-fonte');
-    const selPublico = document.getElementById('f-publico');
-    const selContra = document.getElementById('f-contra');
-    const selDias = document.getElementById('f-dias');
     const search = document.getElementById('search-editais');
     const count = document.getElementById('count-editais');
-    const countTop = document.getElementById('count-editais-top');
-    const fabBadge = document.getElementById('fab-badge');
     const cardsWrap = document.getElementById('cards-editais');
+    let currentPage = 1;
 
-    // Column index map for each select
-    const colMap = { inst: -1, status: -2, tipo: -3, fonte: 1, publico: 7, contra: 8, dias: 5 };
-    const allSels = [selInst, selStatus, selTipo, selFonte, selPublico, selContra, selDias];
-    const selKeys = ['inst', 'status', 'tipo', 'fonte', 'publico', 'contra', 'dias'];
-
-    function matchRow(tr, excludeKey) {
-      const vInst = (selInst?.value || 'all');
-      const vStatus = (selStatus?.value || 'all');
-      const vTipo = (selTipo?.value || 'all');
-      const vFonte = (selFonte?.value || 'all');
-      const vPub = (selPublico?.value || 'all');
-      const vContra = (selContra?.value || 'all');
-      const vDias = (selDias?.value || 'all');
+    function matchRow(tr) {
       const q = (search?.value || '').trim().toLowerCase();
-
-      if (excludeKey !== 'inst') {
-        const name = tr.querySelector('.edital')?.textContent || '';
-        const inst = instOf(name);
-        if (vInst !== 'all' && !inst.includes(vInst) && !inst.includes('todos')) return false;
-      }
-      if (excludeKey !== 'status' && vStatus !== 'all' && tr.dataset.s !== vStatus) return false;
-      if (excludeKey !== 'tipo' && vTipo !== 'all' && tr.dataset.tipo !== vTipo) return false;
-      if (excludeKey !== 'fonte' && vFonte !== 'all' && tr.children[1]?.textContent.trim() !== vFonte) return false;
-      if (excludeKey !== 'publico' && vPub !== 'all' && tr.children[7]?.textContent.trim() !== vPub) return false;
-      if (excludeKey !== 'contra' && vContra !== 'all' && tr.children[8]?.textContent.trim() !== vContra) return false;
-      if (excludeKey !== 'dias' && vDias !== 'all' && diasBucket(tr.children[5]?.textContent) !== vDias) return false;
       if (q && !tr.textContent.toLowerCase().includes(q)) return false;
       return true;
     }
 
-    function repopulateSelect(sel, key, colIdx) {
-      if (!sel) return;
-      const vals = new Set();
-      const prev = sel.value;
-      rows.forEach(tr => {
-        if (!matchRow(tr, key)) return;
-        let v;
-        if (key === 'inst') {
-          const name = tr.querySelector('.edital')?.textContent || '';
-          const insts = instOf(name);
-          insts.forEach(i => { if (i !== 'todos') vals.add(i); });
-        } else if (key === 'status') {
-          v = tr.dataset.s; if (v) vals.add(v);
-        } else if (key === 'tipo') {
-          v = tr.dataset.tipo; if (v) vals.add(v);
-        } else if (key === 'dias') {
-          v = diasBucket(tr.children[5]?.textContent); if (v) vals.add(v);
-        } else {
-          v = tr.children[colIdx]?.textContent.trim(); if (v) vals.add(v);
-        }
-      });
-      // rebuild options
-      const first = sel.querySelector('option');
-      sel.innerHTML = '';
-      sel.appendChild(first);
-      const labels = { inst: { alimentos: 'IST Alimentos e Bebidas', eficiencia: 'IST Eficiência Operacional', biomassa: 'ISI Biomassa' }, status: { aberto: 'Aberto', breve: 'Em breve', continuo: 'Fluxo contínuo' }, tipo: { 'Empresa': 'Empresa', 'Pessoa Física': 'Pessoa Física' }, dias: { d7: '≤ 7 dias', d30: '8–30 dias', d60: '31–60 dias', d60p: '> 60 dias', cont: 'Contínuo' } };
-      Array.from(vals).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v => {
-        const o = document.createElement('option');
-        o.value = v;
-        o.textContent = (labels[key] && labels[key][v]) || (v.length > 40 ? v.slice(0,38)+'…' : v);
-        o.title = v;
-        sel.appendChild(o);
-      });
-      // restore previous value if still valid
-      if (prev && [...vals].includes(prev)) sel.value = prev;
-      else sel.value = 'all';
-    }
-
-    function repopulateAll() {
-      repopulateSelect(selInst, 'inst', -1);
-      repopulateSelect(selStatus, 'status', -2);
-      repopulateSelect(selTipo, 'tipo', -3);
-      repopulateSelect(selFonte, 'fonte', 1);
-      repopulateSelect(selPublico, 'publico', 7);
-      repopulateSelect(selContra, 'contra', 8);
-      repopulateSelect(selDias, 'dias', 5);
-    }
-
-    function countActive() {
-      let n = 0;
-      allSels.forEach(s => { if (s && s.value !== 'all') n++; });
-      if (search && search.value.trim() !== '') n++;
-      return n;
-    }
-
-    function apply() {
-      let vis = 0;
+    function apply(resetPage = true) {
+      if (resetPage) currentPage = 1;
+      const matchingRows = rows.filter(matchRow);
+      const page = paginate(matchingRows.length, currentPage);
+      currentPage = Math.min(currentPage, page.totalPages);
+      const pageRows = new Set(matchingRows.slice(page.start, page.end));
       rows.forEach((tr, i) => {
-        const show = matchRow(tr, null);
+        const show = pageRows.has(tr);
         tr.classList.toggle('hidden', !show);
         const card = cardsWrap?.children[i];
-        if (card) card.style.display = show ? '' : 'none';
-        if (show) vis++;
+        if (card) card.style.display = matchingRows.includes(tr) && show ? '' : 'none';
       });
-      repopulateAll();
-      const label = vis + ' de ' + rows.length + ' editais';
+      const label = matchingRows.length + ' de ' + rows.length + ' editais';
       if (count) count.textContent = label;
-      if (countTop) countTop.textContent = label;
-      const active = countActive();
-      if (fabBadge) {
-        if (active > 0) { fabBadge.textContent = active; fabBadge.hidden = false; }
-        else fabBadge.hidden = true;
-      }
+      updatePagination('pagination-editais', matchingRows.length, currentPage, pageNumber => {
+        currentPage = pageNumber;
+        apply(false);
+      });
     }
 
-    allSels.forEach(s => s && s.addEventListener('change', apply));
     if (search) search.addEventListener('input', apply);
-    const reset = document.getElementById('f-reset');
-    if (reset) reset.addEventListener('click', () => {
-      allSels.forEach(s => { if (s) s.value = 'all'; });
-      if (search) search.value = '';
-      apply();
-    });
-    repopulateAll();
     apply();
   }
 
-  return { setupAderencia, setupEditais, instOf, diasBucket };
+  return { setupNovidades, setupAderencia, setupEditais, instOf, diasBucket, paginate };
 })();
