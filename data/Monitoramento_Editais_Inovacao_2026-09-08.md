@@ -1,9 +1,9 @@
 # Monitoramento de Editais de Inovação
-**Data de referência:** 2026-09-11 · sexta-feira — base para toda classificação de status/prazos.
+**Data de referência:** 2026-09-14 · segunda-feira — base para toda classificação de status/prazos.
 **Escopo:** Nacional (BR), estadual (prioridade MS/Centro-Oeste) e internacional com elegibilidade do Brasil.
-**Metodologia:** Pesquisa e revalidação em fontes oficiais em 11/09/2026; status e prazos comparados com a data do sistema. Campos ausentes foram mantidos como Não encontrado ou —.
+**Metodologia:** Pesquisa e revalidação em fontes oficiais em 14/09/2026; status e prazos comparados com a data do sistema. Campos ausentes foram mantidos como Não encontrado ou —.
 
-## Novidades desde a última atualização (08/09/2026)
+## Novidades desde a última atualização (11/09/2026)
 
 ### Novos editais abertos desde 01/09
 
@@ -24,6 +24,8 @@
 | FAPESP PIPE Jornada Tecnológica – Transição Energética (Fase 1) | Não encontrado | Prazo de pré-proposta encerrado em 02/09/2026. |
 | FINEP Mais Inovação Brasil R2 – Transição Energética | Não encontrado | Prazo prorrogado encerrou em 02/09/2026. |
 | FAPESP – JSPS Japão 2026 (Projetos Conjuntos) | Não encontrado | Prazo de submissão encerrado em 03/09/2026. |
+| Concurso de Reúso de Dados Abertos da CGU | CGU | Prazo encerrado em 11/09/2026. |
+| FAPES nº 11/2026 – Programa Gênesis | FAPES/ES | Prazo encerrado em 11/09/2026. |
 
 ### Alterações de prazo
 
@@ -33,27 +35,26 @@
 | FAPERJ nº 12/2026 – Centelha 3 RJ | Cronograma oficial indica Fase 2 de 23/09 a 22/10; reclassificado como Em breve. |
 | Concurso de Reúso de Dados Abertos da CGU | Inscrições abertas até 11/09/2026; premiação por reconhecimento e selo, sem valor financeiro localizado. |
 | FAPES nº 11/2026 – Programa Gênesis | Inscrições de 26/08 a 11/09/2026; chamada de apoio à criação de empreendimentos inovadores. |
+| FINEP Mais Inovação Brasil R2 – Transformação Mineral | Prazo prorrogado para 30/11/2026; R$ 215 milhões em subvenção econômica para PD&I mineral. |
 
 ## Resumo Executivo
 
-- **Abertos agora:** 31 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.
+- **Abertos agora:** 30 editais com inscrições vigentes em 14/09/2026, mais 5 linhas de fluxo contínuo.
 - **Em breve:** 3 chamadas com abertura programada.
-- **Alerta (encerramento em ≤ 7 dias):** 7 editais fecham até 18/09: Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).
+- **Alerta (encerramento em ≤ 7 dias):** 5 editais fecham até 18/09: FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).
 - **Não confirmado:** 6 itens permanecem sem cronograma oficial claro após busca aprofundada; estão listados ao final.
 
-> **Alerta de prazo:** Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).
+> **Alerta de prazo:** FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).
 
 ## Tabela de Editais (ordenada por encerramento mais próximo)
 
 | Edital | Fonte | Status | Abertura | Encerramento | Dias restantes | Público-alvo | Valor/Faixa | Contrapartida | Principais exigências | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Concurso de Reúso de Dados Abertos da CGU | CGU | Aberto | 29/06/2026 | 11/09/2026 | 0 (hoje) | Pessoas físicas, empresas, órgãos públicos e organizações com iniciativa de reúso de dados | Reconhecimento, certificado e selo; valor financeiro não encontrado | Não exige | Inscrição da iniciativa; análise de admissibilidade; regras do edital/portaria | https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/concurso-dados-abertos |
-| FAPES nº 11/2026 – Programa Gênesis | FAPES/ES | Aberto | 26/08/2026 | 11/09/2026 | 0 (hoje) | Pessoas físicas/equipes com proposta de empreendimento inovador no ES | Não encontrado | Não encontrado | Formulário e documentação conforme edital; execução no ES | https://fapes.es.gov.br/Media/fapes/Editais/Edital%20Programa%20G%C3%AAnesis%202026%20-%20Assinado.pdf |
-| FAPESC/SCTI nº 50/2026 – SC Inovadora | FAPESC/SCTI-SC | Aberto | 14/08/2026 | 14/09/2026 | 3 | Pesquisadores/bolsistas (verticais SC) | Não encontrado | Não exige | Conforme edital PDF | https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora/ |
-| British Council – Researcher Challenges Grants 2026 | British Council | Aberto | 05/08/2026 | 17/09/2026 | 6 | IES do Reino Unido (líder) + ICT sem fins lucrativos BR | Até £40 mil/projeto | Parceria bilateral obrigatória | Grantplatform; Reino Unido lidera | https://opportunities-insight.britishcouncil.org/short-articles/opportunities/researcher-challenges-grants-2026 |
-| CNPq nº 24/2026 – Biotecnologia (PD&I) | CNPq/MCTI/FNDCT | Aberto | 03/08/2026 | 18/09/2026 | 7 | ICT/universidades/pesquisa | Não encontrado | Não exige | Plataforma Carlos Chagas (PICC) | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-24-2026/chamada-publica-cnpq-N-24-2026 |
-| CNPq – Apoio a Eventos de Empreendedorismo e Inovação (2ª rodada) | CNPq | Aberto | 04/08/2026 | 18/09/2026 | 7 | ICTs/IES proponentes de eventos | Não encontrado | Não exige | Submissão PICC | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-13-2026/chamada-publica-cnpq-N-13-2026 |
-| FINEP Mais Inovação Brasil R2 – Saúde (Empresas) | MCTI/FINEP/FNDCT | Aberto | 06/02/2026 | 18/09/2026 | 7 | Empresas + ICT | R$ 300 mi chamada; R$ 10–30 mi/linha | 5%–50% | Parceria ICT; TRL 3–7; nota 14 | https://faleconosco.finep.gov.br/web/guest/w/aten%C3%A7%C3%A3o-novos-prazos |
+| FAPESC/SCTI nº 50/2026 – SC Inovadora | FAPESC/SCTI-SC | Aberto | 14/08/2026 | 14/09/2026 | 0 (hoje) | Pesquisadores/bolsistas (verticais SC) | Não encontrado | Não exige | Conforme edital PDF | https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora/ |
+| British Council – Researcher Challenges Grants 2026 | British Council | Aberto | 05/08/2026 | 17/09/2026 | 3 | IES do Reino Unido (líder) + ICT sem fins lucrativos BR | Até £40 mil/projeto | Parceria bilateral obrigatória | Grantplatform; Reino Unido lidera | https://opportunities-insight.britishcouncil.org/short-articles/opportunities/researcher-challenges-grants-2026 |
+| CNPq nº 24/2026 – Biotecnologia (PD&I) | CNPq/MCTI/FNDCT | Aberto | 03/08/2026 | 18/09/2026 | 4 | ICT/universidades/pesquisa | Não encontrado | Não exige | Plataforma Carlos Chagas (PICC) | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-24-2026/chamada-publica-cnpq-N-24-2026 |
+| CNPq – Apoio a Eventos de Empreendedorismo e Inovação (2ª rodada) | CNPq | Aberto | 04/08/2026 | 18/09/2026 | 4 | ICTs/IES proponentes de eventos | Não encontrado | Não exige | Submissão PICC | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-13-2026/chamada-publica-cnpq-N-13-2026 |
+| FINEP Mais Inovação Brasil R2 – Saúde (Empresas) | MCTI/FINEP/FNDCT | Aberto | 06/02/2026 | 18/09/2026 | 4 | Empresas + ICT | R$ 300 mi chamada; R$ 10–30 mi/linha | 5%–50% | Parceria ICT; TRL 3–7; nota 14 | https://faleconosco.finep.gov.br/web/guest/w/finep-prorroga-prazo-para-projetos-inovadores-na-sa%C3%BAde |
 | FAPESP – Ohio State University Joint Call 2026 | FAPESP + Ohio State (EUA) | Aberto | 27/07/2026 | 22/09/2026 | 11 | Pesquisadores SP + Ohio (biodiversidade, energia, biotech, IA, quantum) | 5 projetos, US$ 20 mil cada | Co-financiamento simétrico | Proposta conjunta | https://oia.osu.edu/news/2026/07/27/applications-open-joint-seed-funding |
 | RAMP – Raw Materials Partnership Joint Call 2026 | Horizon Europe (RAMP); BR via CONFAP/EMBRAPII | Aberto | 23/06/2026 | Pré: 22/09/2026; Completa: 15/02/2027 | 11 | Universidades, P&D, empresas, ONGs, público | ~€40 mi totais | BR financia via FAPs/EMBRAPII | Consórcio ≥3 países (≥2 UE) | https://euraxess.ec.europa.eu/worldwide/lac/news/europe-brazil-and-beyond-raw-materials-partnership-opens-first-joint |
 | FAPERJ nº 15/2026 – Prioridade Indústria RJ 4.0 | FAPERJ/SECTI-RJ | Aberto | 06/08/2026 | 25/09/2026 | 14 | Startups e empresas industriais sediadas no RJ; parcerias com ICTs | Até R$ 200 mil/projeto; R$ 6 mi totais | Financeira mínima de 5% | SisFAPERJ; solução Indústria 4.0; TRL ≥ 6; documentos empresariais; projeto de até 24 meses | https://www.faperj.br/rp/downloads/Edital_FAPERJ_N%C2%BA15_2026_%E2%80%93_Programa_Prioridade_Ind%C3%BAstria_RJ_4.0.pdf |
@@ -72,6 +73,7 @@
 | Prêmio BNDES Ferrovias 2026 | BNDES | Aberto | 30/03/2026 | 30/09/2026 | 19 | Autores individuais ou grupos de até 4 pessoas com diploma superior | R$ 40 mil / R$ 15 mil / R$ 10 mil para os três melhores trabalhos | Não exige | Estudo aplicado sobre ferrovias de carga; envio eletrônico conforme edital; impedimentos institucionais previstos no regulamento | https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/infraestrutura/premio-bndes-ferrovias |
 | FINEP Mais Inovação Brasil R2 – Base Industrial de Defesa | MCTI/FINEP/FNDCT | Aberto | 06/02/2026 | 02/10/2026 | 21 | Empresas + ICT | R$ 300 mi | 5%–50% | Parceria ICT; TRL 3–8; reserva N-NE-CO | https://faleconosco.finep.gov.br/web/guest/w/aten%C3%A7%C3%A3o-novos-prazos |
 | Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call | CDTI (ES) + CONFAP (BR) | Aberto | 2026 (EoI) | 08/10/2026 | 27 | Consórcio (1 empresa ES + 1 entidade BR) | Mín. €250 mil (≥30% BR) | Cada lado financia sua agência | LoI (PI + comercialização); 12–36 meses | https://euraxess.ec.europa.eu/worldwide/lac/spain-brazil-call-funding-collaborative-research-technological-innovation |
+| FINEP Mais Inovação Brasil R2 – Transformação Mineral | MCTI/FINEP/FNDCT | Aberto | 06/02/2026 | 30/11/2026 | 77 | Empresas com parceria obrigatória de ICT | R$ 215 mi em subvenção econômica | Conforme regulamento; parceria empresa–ICT | Risco tecnológico; minerais críticos; mineração urbana; tecnologias sustentáveis; descarbonização mineral | https://www.finep.gov.br/chamadas-publicas/chamadapublica/771 |
 | CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA) | CNPq/MCTI | Aberto | 19/08/2026 | 09/10/2026 | 28 | Pesquisadores em startups/empresas de IA | Não encontrado | Não exige | Plataforma PICC; alinhamento PBIA | https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-29-2026/chamadapublica29_2026_RHAEIA_2769274.pdf |
 | FAPESP – PRONEX 40/2026 (Redes de Excelência) | FAPESP/CNPq | Aberto | 20/08/2026 | 16/10/2026 | 35 | Pesquisadores ICTs SP (redes) | Até R$ 2,5 mi/rede | Não exige | SAGe; Auxílio vigente | https://fapesp.br/18317/programa-de-apoio-a-formacao-de-nucleos-de-excelencia-fapesp-mcticnpq-pronex-chamada-2026 |
 | FAPESP – Biorrefinarias Integradas NWO 2026 | FAPESP + NWO (Holanda) | Aberto | 2026 | 20/10/2026 | 39 | Pesquisadores SP + Holanda (biorrefinarias) | Não encontrado | Co-financiamento | Proposta conjunta | https://fapesp.br/17977/chamada-conjunta-de-propostas-fapespnwo-2026-biorrefinarias-integradas-para-um-futuro-circular |
@@ -102,8 +104,6 @@
 
 | Edital | Instituto(s) com maior aderência | Grau de aderência | Foco educacional? | Justificativa |
 |---|---|---|---|---|
-| Concurso de Reúso de Dados Abertos da CGU | IST Eficiência Operacional | Média | Não | Reúso de dados e soluções inovadoras podem apoiar produtividade e transformação digital, embora o edital não seja industrial específico. |
-| FAPES nº 11/2026 – Programa Gênesis | IST Eficiência Operacional; ISI Biomassa | Média | Não | Programa de criação de empreendimentos inovadores tem aderência temática, mas a execução é restrita ao Espírito Santo. |
 | BNDES Mais Inovação | IST Eficiência Operacional; ISI Biomassa; IST Alimentos | Alta | Não | Linha de crédito para Indústria 4.0, centros de PD&I e bens verdes; acessível a todos os institutos. |
 | Biodiversa+ – BiodivFuture 2026–2027 | ISI Biomassa | Média | Não | "Novos ecossistemas" e biodiversidade aproximam-se da bioeconomia do ISI Biomassa. |
 | British Council – Researcher Challenges Grants 2026 | — | Baixa | Não | Desafios globais de desenvolvimento; parceria UK lidera. |
@@ -132,6 +132,7 @@
 | FINEP Mais Inovação Brasil R2 – Saúde (Empresas) | — | Baixa | Não | Foco em produtos biológicos/vacinas; distante do escopo industrial dos três IST (possível apenas via ICT parceira em bioprocessos). |
 | FINEP Mais Inovação Brasil R2 – Semicondutores | IST Eficiência Operacional | Baixa | Não | Microeletrônica distante do escopo atual dos institutos. |
 | FINEP Mais Inovação Brasil R2 – Tecnologias Digitais | IST Eficiência Operacional | Alta | Não | IA, robótica e GPU Clouds aplicam-se à automação e Indústria 4.0 do instituto de Campo Grande. |
+| Finep Mais Inovação Brasil R2 – Transformação Mineral | ISI Biomassa; IST Eficiência Operacional | Alta | Não | Minerais críticos, mineração urbana e descarbonização da transformação mineral têm aderência direta às linhas de biomassa, sustentabilidade e descarbonização. |
 | FINEP – Desafios Tecnológicos p/ Agricultura Familiar | IST Alimentos e Bebidas | Alta | Não | Pacotes tecnológicos de baixo custo para agro conectam-se ao IST Alimentos e à agroindústria de MS. |
 | FUNDECT-MS nº 13/2026 – PICTEC MS (6ª edição) | IST Alimentos; ISI Biomassa; IST Eficiência | Média | Sim (ensino médio/técnico) | Bolsas de IC para escolas públicas; foco educacional com possível vertente de P&D (bioeconomia, energias renováveis). |
 | Ministério da Saúde – Inovação em Saúde Digital (SUS) | — | Baixa | Não | Soluções para SUS; longe do escopo industrial dos IST. |

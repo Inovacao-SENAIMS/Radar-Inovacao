@@ -1,15 +1,15 @@
 {
   "meta": {
-    "reference_date": "2026-09-11",
-    "reference_date_formatted": "2026-09-11 · sexta-feira — base para toda classificação de status/prazos.",
+    "reference_date": "2026-09-14",
+    "reference_date_formatted": "2026-09-14 · segunda-feira — base para toda classificação de status/prazos.",
     "scope": "Nacional (BR), estadual (prioridade MS/Centro-Oeste) e internacional com elegibilidade do Brasil.",
-    "methodology": "Pesquisa e revalidação em fontes oficiais em 11/09/2026; status e prazos comparados com a data do sistema. Campos ausentes foram mantidos como Não encontrado ou —."
+    "methodology": "Pesquisa e revalidação em fontes oficiais em 14/09/2026; status e prazos comparados com a data do sistema. Campos ausentes foram mantidos como Não encontrado ou —."
   },
   "stats": {
-    "abertos": 31,
+    "abertos": 30,
     "continuos": 5,
     "em_breve": 3,
-    "encerram_7d": 7,
+    "encerram_7d": 5,
     "nao_confirmado": 6
   },
   "novidades": {
@@ -77,6 +77,16 @@
         "Edital": "FAPESP – JSPS Japão 2026 (Projetos Conjuntos)",
         "Fonte": "Não encontrado",
         "Motivo do encerramento": "Prazo de submissão encerrado em 03/09/2026."
+      },
+      {
+        "Edital": "Concurso de Reúso de Dados Abertos da CGU",
+        "Fonte": "CGU",
+        "Motivo do encerramento": "Prazo encerrado em 11/09/2026."
+      },
+      {
+        "Edital": "FAPES nº 11/2026 – Programa Gênesis",
+        "Fonte": "FAPES/ES",
+        "Motivo do encerramento": "Prazo encerrado em 11/09/2026."
       }
     ],
     "alteracoes_prazo": [
@@ -95,54 +105,28 @@
       {
         "Edital": "FAPES nº 11/2026 – Programa Gênesis",
         "Alteração": "Inscrições de 26/08 a 11/09/2026; chamada de apoio à criação de empreendimentos inovadores."
+      },
+      {
+        "Edital": "FINEP Mais Inovação Brasil R2 – Transformação Mineral",
+        "Alteração": "Prazo prorrogado para 30/11/2026; R$ 215 milhões em subvenção econômica para PD&I mineral."
       }
     ]
   },
   "resumo_executivo": [
-    "Abertos agora: 31 editais com inscrições vigentes em 11/09/2026, mais 5 linhas de fluxo contínuo.",
+    "Abertos agora: 30 editais com inscrições vigentes em 14/09/2026, mais 5 linhas de fluxo contínuo.",
     "Em breve: 3 chamadas com abertura programada.",
-    "Alerta (encerramento em ≤ 7 dias): 7 editais fecham até 18/09: Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).",
+    "Alerta (encerramento em ≤ 7 dias): 5 editais fecham até 18/09: FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).",
     "Não confirmado: 6 itens permanecem sem cronograma oficial claro após busca aprofundada; estão listados ao final."
   ],
-  "alerta_prazo": "Concurso de Reúso de Dados Abertos da CGU e FAPES nº 11/2026 – Programa Gênesis (11/09/2026); FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).",
+  "alerta_prazo": "FAPESC/SCTI nº 50/2026 – SC Inovadora (14/09/2026); British Council – Researcher Challenges Grants 2026 (17/09/2026); CNPq nº 24/2026 – Biotecnologia (PD&I), CNPq – Apoio a Eventos de Empreendedorismo e Inovação e FINEP Mais Inovação Brasil R2 – Saúde (Empresas) (18/09/2026).",
   "editais": [
-    {
-      "edital": "Concurso de Reúso de Dados Abertos da CGU",
-      "fonte": "CGU",
-      "status": "aberto",
-      "abertura": "29/06/2026",
-      "encerramento": "11/09/2026",
-      "dias": "0 (hoje)",
-      "tipo_publico": "Empresa",
-      "publico": "Pessoas físicas, empresas, órgãos públicos e organizações com iniciativa de reúso de dados",
-      "valor": "Reconhecimento, certificado e selo; valor financeiro não encontrado",
-      "contrapartida": "Não exige",
-      "exigencias": "Inscrição da iniciativa; análise de admissibilidade; regras do edital/portaria",
-      "link": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/concurso-dados-abertos",
-      "grupo": null
-    },
-    {
-      "edital": "FAPES nº 11/2026 – Programa Gênesis",
-      "fonte": "FAPES/ES",
-      "status": "aberto",
-      "abertura": "26/08/2026",
-      "encerramento": "11/09/2026",
-      "dias": "0 (hoje)",
-      "tipo_publico": "Empresa",
-      "publico": "Pessoas físicas/equipes com proposta de empreendimento inovador no ES",
-      "valor": "Não encontrado",
-      "contrapartida": "Não encontrado",
-      "exigencias": "Formulário e documentação conforme edital; execução no ES",
-      "link": "https://fapes.es.gov.br/Media/fapes/Editais/Edital%20Programa%20G%C3%AAnesis%202026%20-%20Assinado.pdf",
-      "grupo": null
-    },
     {
       "edital": "FAPESC/SCTI nº 50/2026 – SC Inovadora",
       "fonte": "FAPESC/SCTI-SC",
       "status": "aberto",
       "abertura": "14/08/2026",
       "encerramento": "14/09/2026",
-      "dias": "3",
+      "dias": "0 (hoje)",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores/bolsistas (verticais SC)",
       "valor": "Não encontrado",
@@ -157,7 +141,7 @@
       "status": "aberto",
       "abertura": "05/08/2026",
       "encerramento": "17/09/2026",
-      "dias": "6",
+      "dias": "3",
       "tipo_publico": "ICT",
       "publico": "IES do Reino Unido (líder) + ICT sem fins lucrativos BR",
       "valor": "Até £40 mil/projeto",
@@ -172,7 +156,7 @@
       "status": "aberto",
       "abertura": "03/08/2026",
       "encerramento": "18/09/2026",
-      "dias": "7",
+      "dias": "4",
       "tipo_publico": "ICT",
       "publico": "ICT/universidades/pesquisa",
       "valor": "Não encontrado",
@@ -187,7 +171,7 @@
       "status": "aberto",
       "abertura": "04/08/2026",
       "encerramento": "18/09/2026",
-      "dias": "7",
+      "dias": "4",
       "tipo_publico": "ICT",
       "publico": "ICTs/IES proponentes de eventos",
       "valor": "Não encontrado",
@@ -202,13 +186,13 @@
       "status": "aberto",
       "abertura": "06/02/2026",
       "encerramento": "18/09/2026",
-      "dias": "7",
+      "dias": "4",
       "tipo_publico": "ICT",
       "publico": "Empresas + ICT",
       "valor": "R$ 300 mi chamada; R$ 10–30 mi/linha",
       "contrapartida": "5%–50%",
       "exigencias": "Parceria ICT; TRL 3–7; nota 14",
-      "link": "https://faleconosco.finep.gov.br/web/guest/w/aten%C3%A7%C3%A3o-novos-prazos",
+      "link": "https://faleconosco.finep.gov.br/web/guest/w/finep-prorroga-prazo-para-projetos-inovadores-na-sa%C3%BAde",
       "grupo": null
     },
     {
@@ -482,6 +466,21 @@
       "grupo": null
     },
     {
+      "edital": "FINEP Mais Inovação Brasil R2 – Transformação Mineral",
+      "fonte": "MCTI/FINEP/FNDCT",
+      "status": "aberto",
+      "abertura": "06/02/2026",
+      "encerramento": "30/11/2026",
+      "dias": "77",
+      "tipo_publico": "ICT",
+      "publico": "Empresas com parceria obrigatória de ICT",
+      "valor": "R$ 215 mi em subvenção econômica",
+      "contrapartida": "Conforme regulamento; parceria empresa–ICT",
+      "exigencias": "Risco tecnológico; minerais críticos; mineração urbana; tecnologias sustentáveis; descarbonização mineral",
+      "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/771",
+      "grupo": null
+    },
+    {
       "edital": "CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA)",
       "fonte": "CNPq/MCTI",
       "status": "aberto",
@@ -694,20 +693,6 @@
   ],
   "aderencia": [
     {
-      "edital": "Concurso de Reúso de Dados Abertos da CGU",
-      "institutos": "IST Eficiência Operacional",
-      "grau": "media",
-      "foco_educacional": "Não",
-      "justificativa": "Reúso de dados e soluções inovadoras podem apoiar produtividade e transformação digital, embora o edital não seja industrial específico."
-    },
-    {
-      "edital": "FAPES nº 11/2026 – Programa Gênesis",
-      "institutos": "IST Eficiência Operacional; ISI Biomassa",
-      "grau": "media",
-      "foco_educacional": "Não",
-      "justificativa": "Programa de criação de empreendimentos inovadores tem aderência temática, mas a execução é restrita ao Espírito Santo."
-    },
-    {
       "edital": "BNDES Mais Inovação",
       "institutos": "IST Eficiência Operacional; ISI Biomassa; IST Alimentos",
       "grau": "alta",
@@ -902,6 +887,13 @@
       "grau": "alta",
       "foco_educacional": "Não",
       "justificativa": "IA, robótica e GPU Clouds aplicam-se à automação e Indústria 4.0 do instituto de Campo Grande."
+    },
+    {
+      "edital": "Finep Mais Inovação Brasil R2 – Transformação Mineral",
+      "institutos": "ISI Biomassa; IST Eficiência Operacional",
+      "grau": "alta",
+      "foco_educacional": "Não",
+      "justificativa": "Minerais críticos, mineração urbana e descarbonização da transformação mineral têm aderência direta às linhas de biomassa, sustentabilidade e descarbonização."
     },
     {
       "edital": "FINEP – Desafios Tecnológicos p/ Agricultura Familiar",
