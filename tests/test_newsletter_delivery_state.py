@@ -62,6 +62,35 @@ class NewsletterDeliveryStateTests(unittest.TestCase):
         text = """## Tabela de Editais\n\n| Edital | Fonte | Status | Abertura | Encerramento | Dias restantes | Público-alvo | Valor/Faixa | Contrapartida | Principais exigências | Link |\n|---|---|---|---|---|---|---|---|---|---|---|\n| Teste | Fonte | Aberto | 01/09/2026 | 30/09/2026 | 22 | Institutos Federais de Educação, Ciência e Tecnologia | — | — | — | https://example.test |\n"""
         self.assertEqual(parser.parse_markdown(text)["editais"][0]["tipo_publico"], "ICT")
 
+    def test_novidades_does_not_turn_alteracoes_header_into_a_card_after_empty_section(self):
+        parser_spec = importlib.util.spec_from_file_location(
+            "md_to_json", ROOT / "scripts" / "md_to_json.py"
+        )
+        parser = importlib.util.module_from_spec(parser_spec)
+        parser_spec.loader.exec_module(parser)
+        text = """## Novidades desde a última atualização
+
+### Novos editais incorporados nesta atualização
+| Edital | Fonte |
+|---|---|
+| Chamada nova | Fonte oficial |
+
+### Editais encerrados ou retirados da lista ativa
+| Edital | Fonte | Motivo do encerramento |
+|---|---|---|
+
+### Alterações de prazo e status
+| Edital | Alteração |
+|---|---|
+| Chamada alterada | Prazo prorrogado |
+
+## Resumo Executivo
+"""
+
+        novidades = parser.parse_markdown(text)["novidades"]
+
+        self.assertEqual(novidades["alteracoes_prazo"], [{"Edital": "Chamada alterada", "Alteração": "Prazo prorrogado"}])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -53,29 +53,20 @@
     "editais_encerrados": [],
     "alteracoes_prazo": [
       {
-        "Edital": "Edital",
-        "Fonte": "Alteração",
-        "Motivo do encerramento": ""
-      },
-      {
         "Edital": "FAPESP PIPE Jornada Tecnológica 1ª Rodada 2026 (Fase 1)",
-        "Fonte": "Prazo vence hoje (28/09); permanece aberto até o encerramento do dia.",
-        "Motivo do encerramento": ""
+        "Alteração": "Prazo vence hoje (28/09); permanece aberto até o encerramento do dia."
       },
       {
         "Edital": "PET Saúde Informação e Saúde Digital (Edital Conjunto SEIDIGI/SGTES-MS nº 1/2026)",
-        "Fonte": "Prazo vence hoje (28/09); permanece aberto até o encerramento do dia.",
-        "Motivo do encerramento": ""
+        "Alteração": "Prazo vence hoje (28/09); permanece aberto até o encerramento do dia."
       },
       {
         "Edital": "FAPESP nº 44/2026 – UNESCO-TWAS Pós-Doutorado",
-        "Fonte": "Incluída após conferência da lista oficial FAPESP 2026; manifestação de interesse até 01/11.",
-        "Motivo do encerramento": ""
+        "Alteração": "Incluída após conferência da lista oficial FAPESP 2026; manifestação de interesse até 01/11."
       },
       {
         "Edital": "FAPERJ nº 18, 19, 20 e 21/2026",
-        "Fonte": "Quatro editais de obesidade e envelhecimento lançados em 24/09, com submissões até 12/10.",
-        "Motivo do encerramento": ""
+        "Alteração": "Quatro editais de obesidade e envelhecimento lançados em 24/09, com submissões até 12/10."
       }
     ]
   },

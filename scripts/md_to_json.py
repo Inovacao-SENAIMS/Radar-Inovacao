@@ -84,8 +84,10 @@ def parse_novidades(section_lines):
                     novidades["editais_encerrados"] = rows
                 elif current_subsection == "alteracoes_prazo":
                     novidades["alteracoes_prazo"] = rows
-                rows = []
-                headers = None
+            # Mesmo sem registros, uma subseção pode ter cabeçalho de tabela.
+            # Não deixe esse cabeçalho vazar para a tabela seguinte.
+            rows = []
+            headers = None
             
             if "novos editais" in stripped.lower():
                 current_subsection = "novos_editais"
