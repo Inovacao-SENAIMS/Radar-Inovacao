@@ -27,11 +27,11 @@ Para colocar a newsletter em produção, siga o [Guia de ativação](GUIA_ATIVAC
 ├── data/
 │   ├── editais.json           Fonte única de verdade (JSON)
 │   ├── editais.js             Wrapper JS: window.EDITAIS_DATA
-│   ├── Monitoramento_Editais_Inovacao_2026-09-27.md  Relatório datado
+│   ├── Monitoramento_Editais_Inovacao_2026-09-28.md  Relatório datado
 │   └── newsletter.js          Config da newsletter (webappUrl, contactEmail, siteUrl)
 ├── scripts/
 │   ├── md_to_json.py          Parser: Markdown → JSON + JS
-│   ├── refresh_2026_09_27.py  Registro reproduzível desta atualização
+│   ├── refresh_2026_09_28.py  Registro reproduzível desta atualização
 │   ├── render_static.py       Gerador HTML estático (opcional)
 │   ├── email_template.py      Design do e-mail digest (HTML + texto)
 │   ├── send_newsletter.py     Envio via Gmail SMTP (lotes, registro anti-duplicata no Sheets)
@@ -64,7 +64,7 @@ newsletter → Gmail SMTP                       (digest para assinantes)
 1. Editar o `.md` com novos editais
 2. Executar:
    ```powershell
-   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-27.md data/editais.json
+   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-28.md data/editais.json
    ```
 3. Abrir `index.html` no navegador
 
