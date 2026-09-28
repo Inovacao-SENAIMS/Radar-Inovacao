@@ -4,9 +4,8 @@ Painel web estático que monitora editais, chamadas públicas e programas de fom
 
 ## Funcionalidades
 
-- **Tabela de Aderência** — classifica editais por grau de aderência aos 3 institutos SENAI/MS (IST Alimentos, IST Eficiência Operacional, ISI Biomassa)
-- **Tabela de Editais** — 38+ editais com filtros dependentes (instituto, status, tipo de público, fonte, dias restantes)
-- **Filtros dependentes** — ao selecionar um filtro, os demais se adequam automaticamente
+- **Tabela de Aderência** — classifica os editais para os 3 institutos SENAI/MS, com filtros por instituto, foco educacional e grau, além de busca livre
+- **Tabela de Editais** — oportunidades da base atual com busca livre e paginação
 - **Cards mobile** — em telas pequenas, tabelas são substituídas por cards legíveis
 - **Dados embutidos** — funciona com `file://` (duplo-clique) sem servidor
 - **Newsletter gratuita** — assinatura no site (nome, e-mail, consentimento LGPD) com double opt-in e digest semanal por e-mail — arquitetura 100% gratuita (Google Apps Script + Gmail SMTP), ver `PRD.md`
@@ -22,19 +21,17 @@ Para colocar a newsletter em produção, siga o [Guia de ativação](GUIA_ATIVAC
 │   └── style.css              Layout, tabelas, filtros, responsivo
 ├── js/
 │   ├── render.js              Gera DOM a partir do JSON
-│   ├── filters.js             Lógica de filtros com dependência
+│   ├── filters.js             Filtros, busca e paginação
+│   ├── newsletter.js          Seção/formulário de assinatura (consentimento LGPD)
 │   └── app.js                 Entry point: scroll spy, nav, drawer
 ├── data/
 │   ├── editais.json           Fonte única de verdade (JSON)
 │   ├── editais.js             Wrapper JS: window.EDITAIS_DATA
+│   ├── Monitoramento_Editais_Inovacao_2026-09-27.md  Relatório datado
 │   └── newsletter.js          Config da newsletter (webappUrl, contactEmail, siteUrl)
-├── js/
-│   ├── render.js              Gera DOM a partir do JSON
-│   ├── filters.js             Lógica de filtros com dependência
-│   ├── newsletter.js          Seção/formulário de assinatura (consentimento LGPD)
-│   └── app.js                 Entry point: scroll spy, nav, drawer
 ├── scripts/
 │   ├── md_to_json.py          Parser: Markdown → JSON + JS
+│   ├── refresh_2026_09_27.py  Registro reproduzível desta atualização
 │   ├── render_static.py       Gerador HTML estático (opcional)
 │   ├── email_template.py      Design do e-mail digest (HTML + texto)
 │   ├── send_newsletter.py     Envio via Gmail SMTP (lotes, registro anti-duplicata no Sheets)
@@ -67,7 +64,7 @@ newsletter → Gmail SMTP                       (digest para assinantes)
 1. Editar o `.md` com novos editais
 2. Executar:
    ```powershell
-   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-08.md data/editais.json
+   python scripts/md_to_json.py data/Monitoramento_Editais_Inovacao_2026-09-27.md data/editais.json
    ```
 3. Abrir `index.html` no navegador
 

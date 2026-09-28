@@ -152,7 +152,7 @@ def render(data):
     <div class="stats">
       <div class="stat ok"><div class="n">{s['abertos']}</div><div class="l">Editais abertos agora</div></div>
       <div class="stat cyan"><div class="n">{s['continuos']}</div><div class="l">Fluxo contínuo (sem prazo)</div></div>
-      <div class="stat"><div class="n">{s['em_breve']}</div><div class="l">Em breve (abrem set/2026)</div></div>
+      <div class="stat"><div class="n">{s['em_breve']}</div><div class="l">Em breve</div></div>
       <div class="stat alert"><div class="n">{s['encerram_7d']}</div><div class="l">Encerram em ≤ 7 dias</div></div>
     </div>
     <section class="doc" id="resumo">

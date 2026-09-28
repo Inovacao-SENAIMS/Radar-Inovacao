@@ -64,7 +64,7 @@ const Render = (() => {
     const items = [
       { n: s.abertos, l: 'Editais abertos agora', cls: 'ok' },
       { n: s.continuos, l: 'Fluxo contínuo (sem prazo)', cls: 'cyan' },
-      { n: s.em_breve, l: 'Em breve (abrem set/2026)', cls: '' },
+      { n: s.em_breve, l: 'Em breve', cls: '' },
       { n: s.encerram_7d, l: 'Encerram em ≤ 7 dias', cls: 'alert' },
     ];
     return el('div', { class: 'stats' }, items.map(i =>
@@ -142,7 +142,7 @@ const Render = (() => {
     const tagMap = {
       novo: { label: 'Novo', cls: 'pill p-open' },
       encerrado: { label: 'Encerrado', cls: 'pill p-closed' },
-      alterado: { label: 'Prazo alterado', cls: 'pill p-soon' },
+      alterado: { label: 'Atualizado', cls: 'pill p-soon' },
     };
 
     const cards = allItems.map(item => {
