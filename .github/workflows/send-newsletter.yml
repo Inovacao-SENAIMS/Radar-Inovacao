@@ -8,6 +8,18 @@ on:
         required: true
         default: true
         type: boolean
+  workflow_call:
+    inputs:
+      force:
+        description: 'Enviar mesmo sem novidades'
+        required: false
+        default: false
+        type: boolean
+      dry_run:
+        description: 'Simular o envio'
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [main]
     paths:
@@ -36,8 +48,12 @@ jobs:
 
       - name: Enviar digest aos assinantes ativos
         run: |
+          FORCE=""
+          if [[ "${{ inputs.force }}" == "true" ]]; then FORCE="--force"; fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
-            python scripts/send_newsletter.py --send --dry-run
+            python scripts/send_newsletter.py --send --dry-run $FORCE
+          elif [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            python scripts/send_newsletter.py --send --dry-run $FORCE
           else
-            python scripts/send_newsletter.py --send
+            python scripts/send_newsletter.py --send $FORCE
           fi

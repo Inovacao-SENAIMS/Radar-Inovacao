@@ -1,0 +1,25 @@
+{
+  "editais": [
+    {"edital": "E1", "fonte": "FAPESP", "status": "aberto", "abertura": "01/09/2026", "encerramento": "12/10/2026", "publico": "Empresas SP", "valor": "R$ 1 mi", "contrapartida": "Não exige", "exigencias": "SAGe", "link": "https://fapesp.br/1"},
+    {"edital": "E2", "fonte": "CNPq", "status": "aberto", "abertura": "01/09/2026", "encerramento": "30/11/2026", "publico": "ICTs", "valor": "Não encontrado", "contrapartida": "Não exige", "exigencias": "PICC", "link": "https://cnpq.br/2"},
+    {"edital": "E3", "fonte": "FINEP", "status": "aberto", "abertura": "01/09/2026", "encerramento": "10/01/2027", "publico": "Empresas + ICT", "valor": "R$ 5 mi", "contrapartida": "Financeira", "exigencias": "Plano", "link": "https://finep.gov.br/3"},
+    {"edital": "E4", "fonte": "BNDES", "status": "continuo", "abertura": "Permanente", "encerramento": "Contínuo", "publico": "Empresas", "valor": "—", "contrapartida": "Crédito", "exigencias": "—", "link": "https://bndes.gov.br/4"},
+    {"edital": "E5", "fonte": "EMBRAPII", "status": "continuo", "abertura": "Permanente", "encerramento": "Contínuo", "publico": "Empresas + ICT", "valor": "—", "contrapartida": "Compartilhada", "exigencias": "—", "link": "https://embrapii.org.br/5"},
+    {"edital": "E6", "fonte": "FAPERJ", "status": "breve", "abertura": "26/10/2026", "encerramento": "26/11/2026", "publico": "Orientadores RJ", "valor": "Bolsa", "contrapartida": "Não encontrado", "exigencias": "SisFAPERJ", "link": "https://faperj.br/6"},
+    {"edital": "E7", "fonte": "FAPESP", "status": "aberto", "abertura": "01/09/2026", "encerramento": "15/02/2027", "publico": "Consórcios", "valor": "Não encontrado", "contrapartida": "Não encontrado", "exigencias": "Consórcio", "link": "https://fapesp.br/7"},
+    {"edital": "E8", "fonte": "CONFAP", "status": "aberto", "abertura": "01/09/2026", "encerramento": "08/12/2026", "publico": "ICTs", "valor": "Não encontrado", "contrapartida": "FAP financia", "exigencias": "Consórcio ≥3 países", "link": "https://confap.org.br/8"},
+    {"edital": "E9", "fonte": "CNPq", "status": "aberto", "abertura": "19/08/2026", "encerramento": "11/12/2026", "publico": "ICTs/IES", "valor": "Não encontrado", "contrapartida": "Não exige", "exigencias": "PICC", "link": "https://cnpq.br/9"},
+    {"edital": "E10", "fonte": "FINEP", "status": "aberto", "abertura": "09/09/2026", "encerramento": "14/01/2027", "publico": "ICTs sem fins lucrativos", "valor": "R$ 2–5 mi", "contrapartida": "Isenta", "exigencias": "ITCP e NIT", "link": "https://finep.gov.br/10"},
+    {"edital": "E11", "fonte": "FAPESP", "status": "aberto", "abertura": "01/09/2026", "encerramento": "03/11/2026", "publico": "Empresas SP", "valor": "R$ 500 mil", "contrapartida": "Não encontrado", "exigencias": "SAGe", "link": "https://fapesp.br/11"},
+    {"edital": "E12", "fonte": "CDTI/CONFAP", "status": "aberto", "abertura": "2026", "encerramento": "08/10/2026", "publico": "Consórcio BR+ES", "valor": "€250 mil", "contrapartida": "Cada agência financia", "exigencias": "LoI", "link": "https://confap.org.br/12"}
+  ],
+  "aderencia": [
+    {"edital": "E1", "institutos": "IST Eficiência Operacional; ISI Biomassa", "grau": "alta", "foco_educacional": "Não", "justificativa": "Transição energética."},
+    {"edital": "E2", "institutos": "ISI Biomassa", "grau": "media", "foco_educacional": "Não", "justificativa": "Bioeconomia."}
+  ],
+  "nao_confirmado": [
+    {"edital": "X1", "fonte": "FGB", "motivo": "Sem data oficial."}
+  ],
+  "resumo_executivo": ["Abertos agora: 10 editais.", "2 de fluxo contínuo.", "2 em breve.", "1 não confirmado."],
+  "alerta_prazo": "E12 (08/10/2026); E1 (12/10/2026)."
+}

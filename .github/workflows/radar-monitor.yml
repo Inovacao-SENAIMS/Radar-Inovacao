@@ -1,0 +1,75 @@
+name: Radar — atualização automática 3x/semana
+
+on:
+  schedule:
+    - cron: '0 12 * * 1,3,5'   # 08h America/Cuiaba (UTC-4)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Gerar e validar sem publicar nem enviar'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: radar-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v6
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Rodar a pesquisa automática (Gemini + busca web)
+        id: research
+        continue-on-error: true
+        run: |
+          ARGS=""
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
+            ARGS="--dry-run"
+          fi
+          python scripts/research_editais.py $ARGS
+
+      - name: Publicar a atualização
+        if: steps.research.outcome == 'success' && github.event_name == 'schedule'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/editais.json data/editais.js data/Monitoramento_Editais_Inovacao_*.md
+          git diff --cached --quiet && echo "Sem mudanças para publicar" || \
+            git commit -m "chore: atualização automática do radar de editais ($(date -u +%F))"
+          git push
+
+      - name: Enviar a newsletter
+        if: steps.research.outcome == 'success' && github.event_name == 'schedule'
+        uses: ./.github/workflows/send-newsletter.yml
+        secrets: inherit
+        with:
+          force: true
+
+      - name: Abrir Issue em caso de falha
+        if: failure() || steps.research.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Radar automático: falha $(date -u +%F)"
+          BODY="A atualização automática de $(date -u +%F) falhou. Veja o log em ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}."
+          EXISTING="$(gh issue list --search "$TITLE in:title" --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY"
+          fi
