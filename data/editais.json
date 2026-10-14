@@ -1,264 +1,178 @@
 {
   "meta": {
-    "reference_date": "2026-10-08",
-    "reference_date_formatted": "2026-10-08 · quinta-feira — America/Cuiaba; base para classificação de status/prazos.",
+    "reference_date": "2026-10-14",
+    "reference_date_formatted": "2026-10-14 · quarta-feira — America/Cuiaba; base para classificação de status/prazos.",
     "scope": "Nacional (BR), estadual (prioridade MS/Centro-Oeste) e internacional com elegibilidade do Brasil.",
-    "methodology": "Revisão em fontes oficiais em 08/10/2026 (FAPESP, CNPq, CONFAP, FAPERJ, FINEP/MCTI, FUNDECT-MS e Portal da Indústria — Plataforma Inovação para a Indústria/CNI/SENAI-SESI); prazos comparados com a data local. O monitor não é inventário exaustivo; inscrições condicionadas à elegibilidade e à etapa aplicável."
+    "methodology": "Revisão em fontes oficiais em 14/10/2026 (FINEP/MCTI, CNPq, CAPES, FAPESP, CONFAP/Horizon Europe, FAPERJ, FAPESC, FACEPE, FUNDECT-MS e Portal da Indústria — Plataforma Inovação para a Indústria/CNI/SENAI-SESI); prazos comparados com a data local. O monitor não é inventário exaustivo; inscrições condicionadas à elegibilidade e à etapa aplicável."
   },
   "stats": {
-    "abertos": 40,
-    "continuos": 7,
-    "em_breve": 6,
-    "nao_confirmado": 4,
+    "abertos": 41,
+    "continuos": 10,
+    "em_breve": 7,
+    "nao_confirmado": 5,
     "encerram_7d": 7
   },
   "novidades": {
     "novos_editais": [
       {
-        "Edital": "Chamada Smart Factory – Brasil Mais Produtivo (SENAI/FINEP, 11ª edição)",
-        "Fonte": "SENAI/FINEP (Plataforma Inovação)",
-        "Abertura": "30/09/2026",
-        "Encerramento": "1ª janela: 16/10/2026 (até 4 janelas até mar/2027)",
-        "Destaque": "R$ 47,5 mi não reembolsáveis; até 70% por projeto"
+        "Edital": "FAPESC/SSP nº 41/2026 – INOVASEG/SC (Segurança Pública)",
+        "Fonte": "FAPESC",
+        "Abertura": "06/07/2026",
+        "Encerramento": "15/10/2026",
+        "Destaque": "Não encontrado"
       },
       {
-        "Edital": "CAPES nº 23/2026 – Programa de Apoio à Pós-Graduação Indígena (PDAI)",
-        "Fonte": "CAPES",
-        "Abertura": "02/10/2026",
-        "Encerramento": "26/10/2026",
-        "Destaque": "Bolsas CAPES"
+        "Edital": "FAPESC/SED nº 54/2026 – Pesquisa e Inovação na Educação Catarinense",
+        "Fonte": "FAPESC",
+        "Abertura": "10/09/2026",
+        "Encerramento": "20/10/2026",
+        "Destaque": "Não encontrado"
       },
       {
-        "Edital": "FAPESP – Aperfeiçoamento de especialistas em museus e acervos (PAIP)",
-        "Fonte": "FAPESP",
-        "Abertura": "Não encontrado",
+        "Edital": "FAPESC/CNPq/CAPES nº 55/2026 – PROFIX-CB (Fixação de Doutores)",
+        "Fonte": "FAPESC",
+        "Abertura": "23/09/2026",
         "Encerramento": "06/11/2026",
         "Destaque": "Não encontrado"
       },
       {
-        "Edital": "FAPESP – BEPE Iniciação Científica (Estágio de Pesquisa no Exterior)",
-        "Fonte": "FAPESP",
-        "Abertura": "Não encontrado",
-        "Encerramento": "11/12/2026",
-        "Destaque": "Bolsa BEPE"
-      },
-      {
-        "Edital": "FAPESP – BEPE Mestrado (Estágio de Pesquisa no Exterior)",
-        "Fonte": "FAPESP",
-        "Abertura": "Não encontrado",
-        "Encerramento": "11/12/2026",
-        "Destaque": "Bolsa BEPE"
-      },
-      {
-        "Edital": "CNPq nº 33/2026 – Bolsas de Produtividade (PQ/DT/PQSr)",
-        "Fonte": "CNPq",
+        "Edital": "Finep Rede EUREKA – Resiliência a Desastres (fase nacional)",
+        "Fonte": "FINEP/MCTI",
         "Abertura": "07/10/2026",
-        "Encerramento": "07/01/2027",
-        "Destaque": "Bolsa de produtividade"
+        "Encerramento": "06/11/2026",
+        "Destaque": "R$ 1 mi a R$ 5 mi por projeto; R$ 7 mi na chamada"
       },
       {
-        "Edital": "Chamada Regional (SENAI) – SENAI/RJ Inovação em Eficiência Energética (Chamada 3)",
-        "Fonte": "SENAI/RJ (Plataforma Inovação)",
-        "Abertura": "11/02/2026",
-        "Encerramento": "Não encontrado",
-        "Destaque": "Não encontrado"
+        "Edital": "MSCA Doctoral Networks 2026 (Horizon Europe)",
+        "Fonte": "Comissão Europeia / MSCA",
+        "Abertura": "28/05/2026",
+        "Encerramento": "24/11/2026",
+        "Destaque": "€593 mi (orçamento global)"
       },
       {
-        "Edital": "Eureka Eurostars – Call 12 for projects",
-        "Fonte": "Eureka/Horizon Europe",
-        "Abertura": "17/12/2026",
-        "Encerramento": "04/03/2027",
-        "Destaque": "Conforme regra nacional de cada parceiro"
+        "Edital": "Finep Mais Inovação Brasil R2 – Semicondutores",
+        "Fonte": "MCTI/FINEP/FNDCT",
+        "Abertura": "Não encontrado",
+        "Encerramento": "25/11/2026",
+        "Destaque": "Subvenção econômica (Rodada 2 do programa Mais Inovação Brasil)"
       },
       {
-        "Edital": "FAPESP PIPE Jornada Tecnológica – 7ª Chamada (Educação)",
-        "Fonte": "FAPESP",
-        "Abertura": "13/10/2026",
-        "Encerramento": "Não encontrado",
-        "Destaque": "Não encontrado"
+        "Edital": "5ª Chamada Finep/RCN – Brasil-Noruega (Rede EUREKA)",
+        "Fonte": "FINEP + Research Council of Norway",
+        "Abertura": "09/11/2026",
+        "Encerramento": "16/12/2026",
+        "Destaque": "Até R$ 3 mi por projeto (Finep); até NOK 10 mi (RCN)"
       },
       {
-        "Edital": "FAPESP PIPE Jornada Tecnológica – 8ª Chamada (Geral)",
-        "Fonte": "FAPESP",
-        "Abertura": "16/11/2026",
-        "Encerramento": "Não encontrado",
-        "Destaque": "Não encontrado"
+        "Edital": "FutureFoodS – 3ª Chamada Transnacional (GETS)",
+        "Fonte": "FutureFoodS (Horizon Europe)",
+        "Abertura": "Novembro/2026",
+        "Encerramento": "Pré-proposta: 11/01/2027",
+        "Destaque": "Definido por agência nacional"
       },
       {
-        "Edital": "MSCA Staff Exchanges 2027 (Horizon Europe)",
-        "Fonte": "Horizon Europe/CONFAP",
-        "Abertura": "15/12/2026",
-        "Encerramento": "Abril/2027 (a confirmar)",
-        "Destaque": "~€97,9 mi (orçamento UE)"
-      },
-      {
-        "Edital": "BID Lab – Convocatória para Fundos de Capital Empreendedor",
-        "Fonte": "BID Lab",
-        "Abertura": "Contínua",
-        "Encerramento": "31/10/2026",
-        "Destaque": "Não encontrado"
-      },
-      {
-        "Edital": "Aliança Industrial (SENAI)",
-        "Fonte": "SENAI (Plataforma Inovação)",
+        "Edital": "FAPESP–DFG (Alemanha)",
+        "Fonte": "FAPESP/DFG",
         "Abertura": "Permanente",
         "Encerramento": "Contínuo",
-        "Destaque": "R$ 2 mi por fase complementar"
+        "Destaque": "Auxílio à Pesquisa Regular e Projeto Temático"
       },
       {
-        "Edital": "Chamada FAPESP/CONFAP/Horizon Europe",
-        "Fonte": "FAPESP/CONFAP",
+        "Edital": "FAPESP–NSF (National Science Foundation, EUA)",
+        "Fonte": "FAPESP/NSF",
         "Abertura": "Permanente",
         "Encerramento": "Contínuo",
-        "Destaque": "Não encontrado"
+        "Destaque": "Auxílio à Pesquisa Regular e Temático"
       },
       {
-        "Edital": "FAPESP-BBSRC Pump-Priming Award (FAPPA)",
+        "Edital": "FAPESP–UKRI (Reino Unido)",
         "Fonte": "FAPESP/UKRI",
         "Abertura": "Permanente",
         "Encerramento": "Contínuo",
-        "Destaque": "Não encontrado"
-      },
-      {
-        "Edital": "Habitats de Inovação (SENAI)",
-        "Fonte": "SENAI (Plataforma Inovação)",
-        "Abertura": "Permanente",
-        "Encerramento": "Contínuo",
-        "Destaque": "Conforme chamada regional"
+        "Destaque": "Auxílio à Pesquisa Regular, Jovem Pesquisador ou Temático"
       }
     ],
-    "editais_encerrados": [],
+    "editais_encerrados": [
+      {
+        "Edital": "FUNDECT-MS nº 09/2026 – PAE-MS (eventos C,T&I)",
+        "Fonte": "FUNDECT/SEMADESC-MS",
+        "Motivo do encerramento": "Submissão encerrada em 08/10/2026 (17h, hora de Brasília)."
+      },
+      {
+        "Edital": "Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call",
+        "Fonte": "CDTI (ES) + CONFAP (BR)",
+        "Motivo do encerramento": "Submissão encerrada em 08/10/2026."
+      },
+      {
+        "Edital": "CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA)",
+        "Fonte": "CNPq/MCTI",
+        "Motivo do encerramento": "Prazo final venceu em 09/10/2026; item retirado da lista de chamadas abertas do CNPq."
+      },
+      {
+        "Edital": "FAPERJ nº 18/2026 – Pesquisa em Obesidade (CNE/CNPq A-B)",
+        "Fonte": "FAPERJ/SECTI-RJ",
+        "Motivo do encerramento": "Submissão encerrada em 12/10/2026."
+      },
+      {
+        "Edital": "FAPERJ nº 19/2026 – Pesquisa em Obesidade (JCNE/CNPq C-D)",
+        "Fonte": "FAPERJ/SECTI-RJ",
+        "Motivo do encerramento": "Submissão encerrada em 12/10/2026."
+      },
+      {
+        "Edital": "FAPESP–ANR Generic Call for Proposals 2027",
+        "Fonte": "FAPESP/ANR",
+        "Motivo do encerramento": "Pré-cadastro conjunto encerrado em 13/10/2026; proposta completa segue pelo lado da ANR (2027)."
+      }
+    ],
     "alteracoes_prazo": [
       {
-        "Edital": "FAPERJ nº 20 e 21/2026 – Envelhecimento com Qualidade de Vida",
-        "Alteração": "Prazo prorrogado de 12/10/2026 para 19/10/2026 (lista oficial FAPERJ)."
-      },
-      {
-        "Edital": "FAPESP SPRINT 2026",
-        "Alteração": "Confirmadas 2 edições: Edição 1 em 26/10/2026 e Edição 2 em 22/02/2027."
-      },
-      {
         "Edital": "Finep PRONINC 2026 – Tecnologias para Economia Solidária",
-        "Alteração": "Cadastro de instituições na plataforma FINEP até 09/10/2026; propostas até 14/01/2027."
+        "Alteração": "Cadastro SISGON prorrogado de 16/10/2026 para 17/11/2026; propostas até 14/01/2027."
       },
       {
-        "Edital": "Portal da Indústria – Plataforma Inovação para a Indústria",
-        "Alteração": "Fonte incorporada à metodologia desta rodada (antes ausente). Chamadas Smart Factory (FINEP/SENAI), Aliança Industrial, Habitats de Inovação e Chamada Regional (SENAI/RJ) incluídas."
+        "Edital": "Finep COOPERAMAIS Tecnologia – ICT",
+        "Alteração": "Submissão de propostas confirmada para 08/12/2026 (cadastro 01/12/2026)."
+      },
+      {
+        "Edital": "Finep Mais Inovação Brasil R2 – Semicondutores",
+        "Alteração": "Prazo prorrogado de 30/09/2026 para 25/11/2026 e incorporado à base."
+      },
+      {
+        "Edital": "FAPESP PIPE Jornada Tecnológica – Indústria do Futuro (Fase 1)",
+        "Alteração": "Pré-proposta encerrada em 08/10/2026; etapa vigente é a proposta completa, até 09/12/2026."
+      },
+      {
+        "Edital": "FAPESP PIPE Jornada Tecnológica – 7ª Chamada (Educação)",
+        "Alteração": "Chamada aberta em 13/10/2026 para pré-propostas (tema Tecnologias Educacionais); prazo em 12/11/2026."
+      },
+      {
+        "Edital": "CNPq nº 33/2026 – Bolsas de Produtividade (PQ/DT/PQSr)",
+        "Alteração": "Errata nº 1 (13/10/2026) alterou critério de julgamento do CA-DT; prazo inalterado (07/01/2027)."
       }
     ]
   },
   "resumo_executivo": [
-    "Abertos agora: 40 editais com etapa vigente em 08/10/2026, mais 7 linhas de fluxo contínuo sem prazo definido.",
-    "Em breve: 6 chamadas com abertura programada.",
-    "Alerta (encerramento em ≤ 7 dias): 7 editais: FAPESP PIPE Jornada Tecnológica – Indústria do Futuro (Fase 1) (Pré: 08/10/2026; completa: 09/12/2026); FUNDECT-MS nº 09/2026 – PAE-MS (eventos C,T&I) (08/10/2026); Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call (08/10/2026); CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA) (09/10/2026); FAPERJ nº 18/2026 – Pesquisa em Obesidade (CNE/CNPq A-B) (12/10/2026); FAPERJ nº 19/2026 – Pesquisa em Obesidade (JCNE/CNPq C-D) (12/10/2026); FAPESP–ANR Generic Call for Proposals 2027 (Pré-cadastro: 13/10/2026).",
-    "Não confirmado: 4 itens sem janela de inscrição confirmada, listados ao final.",
-    "Novidade de fonte: o Portal da Indústria (Plataforma Inovação para a Indústria) passou a ser fonte ativa desta rodada."
+    "Abertos agora: 41 editais com etapa vigente em 14/10/2026, mais 10 linhas de fluxo contínuo sem prazo definido.",
+    "Em breve: 7 chamadas com abertura programada.",
+    "Alerta (encerramento em ≤ 7 dias): 7 editais: FAPESC/SSP nº 41/2026 – INOVASEG/SC (Segurança Pública) (15/10/2026); Chamada Smart Factory – Brasil Mais Produtivo (SENAI/FINEP, 11ª edição) (1ª janela: 16/10/2026 (até 4 janelas até mar/2027)); FAPESP – PRONEX 40/2026 (Redes de Excelência) (16/10/2026); FAPERJ nº 20/2026 – Envelhecimento com Qualidade de Vida (CNE/CNPq A-B) (19/10/2026); FAPERJ nº 21/2026 – Envelhecimento com Qualidade de Vida (JCNE/CNPq C-D) (19/10/2026); FAPESC/SED nº 54/2026 – Pesquisa e Inovação na Educação Catarinense (20/10/2026); FAPESP – Biorrefinarias Integradas NWO 2026 (20/10/2026).",
+    "Não confirmado: 5 itens sem janela de inscrição confirmada, listados ao final.",
+    "Novidade da rodada: entrada da FINEP/Rede EUREKA (Resiliência a Desastres e cooperação Brasil-Noruega), da FAPESC (SC) e novos acordos contínuos FAPESP (NSF, DFG, UKRI); saída de 6 editais com prazo vencido."
   ],
-  "alerta_prazo": "FAPESP PIPE Jornada Tecnológica – Indústria do Futuro (Fase 1) (Pré: 08/10/2026; completa: 09/12/2026); FUNDECT-MS nº 09/2026 – PAE-MS (eventos C,T&I) (08/10/2026); Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call (08/10/2026); CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA) (09/10/2026); FAPERJ nº 18/2026 – Pesquisa em Obesidade (CNE/CNPq A-B) (12/10/2026); FAPERJ nº 19/2026 – Pesquisa em Obesidade (JCNE/CNPq C-D) (12/10/2026); FAPESP–ANR Generic Call for Proposals 2027 (Pré-cadastro: 13/10/2026).",
+  "alerta_prazo": "FAPESC/SSP nº 41/2026 – INOVASEG/SC (Segurança Pública) (15/10/2026); Chamada Smart Factory – Brasil Mais Produtivo (SENAI/FINEP, 11ª edição) (1ª janela: 16/10/2026 (até 4 janelas até mar/2027)); FAPESP – PRONEX 40/2026 (Redes de Excelência) (16/10/2026); FAPERJ nº 20/2026 – Envelhecimento com Qualidade de Vida (CNE/CNPq A-B) (19/10/2026); FAPERJ nº 21/2026 – Envelhecimento com Qualidade de Vida (JCNE/CNPq C-D) (19/10/2026); FAPESC/SED nº 54/2026 – Pesquisa e Inovação na Educação Catarinense (20/10/2026); FAPESP – Biorrefinarias Integradas NWO 2026 (20/10/2026).",
   "editais": [
     {
-      "edital": "FAPESP PIPE Jornada Tecnológica – Indústria do Futuro (Fase 1)",
-      "fonte": "FAPESP",
+      "edital": "FAPESC/SSP nº 41/2026 – INOVASEG/SC (Segurança Pública)",
+      "fonte": "FAPESC",
       "status": "aberto",
-      "abertura": "08/09/2026",
-      "encerramento": "Pré: 08/10/2026; completa: 09/12/2026",
-      "dias": "0",
-      "tipo_publico": "Empresa",
-      "publico": "Pequenas empresas sediadas ou com P&D em SP",
-      "valor": "Até R$ 500 mil/projeto; R$ 25 mi na chamada",
-      "contrapartida": "Não encontrado",
-      "exigencias": "SAGe; pesquisador responsável sócio da empresa e residente em SP; até 250 empregados",
-      "link": "https://fapesp.br/18349",
-      "grupo": null
-    },
-    {
-      "edital": "FUNDECT-MS nº 09/2026 – PAE-MS (eventos C,T&I)",
-      "fonte": "FUNDECT/SEMADESC-MS",
-      "status": "aberto",
-      "abertura": "31/07/2026",
-      "encerramento": "08/10/2026",
-      "dias": "0",
-      "tipo_publico": "Empresa",
-      "publico": "Proponentes de eventos científicos, tecnológicos e de inovação em MS",
-      "valor": "Não encontrado",
-      "contrapartida": "Não encontrado",
-      "exigencias": "SIGFUNDECT até 17h de Brasília; eventos regionais, nacionais ou internacionais em MS",
-      "link": "https://www.fundect.ms.gov.br/wp-content/uploads/2026/09/Prorrogacao_prazo_submissao_Chamada_PAE_26-1.pdf",
-      "grupo": null
-    },
-    {
-      "edital": "Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call",
-      "fonte": "CDTI (ES) + CONFAP (BR)",
-      "status": "aberto",
-      "abertura": "2026 (EoI)",
-      "encerramento": "08/10/2026",
-      "dias": "0",
-      "tipo_publico": "Empresa",
-      "publico": "Consórcio (1 empresa ES + 1 entidade BR)",
-      "valor": "Mín. €250 mil (≥30% BR)",
-      "contrapartida": "Cada lado financia sua agência",
-      "exigencias": "LoI (PI + comercialização); 12–36 meses",
-      "link": "https://confap.org.br/pt/editais/114/chamada-confap-cdti-2026-2027",
-      "grupo": null
-    },
-    {
-      "edital": "CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA)",
-      "fonte": "CNPq/MCTI",
-      "status": "aberto",
-      "abertura": "19/08/2026",
-      "encerramento": "09/10/2026",
+      "abertura": "06/07/2026",
+      "encerramento": "15/10/2026",
       "dias": "1",
-      "tipo_publico": "Pessoa Física",
-      "publico": "Pesquisadores em startups/empresas de IA",
+      "tipo_publico": "Empresa",
+      "publico": "Bolsistas qualificados para instituições de segurança pública de SC",
       "valor": "Não encontrado",
-      "contrapartida": "Não exige",
-      "exigencias": "Plataforma PICC; alinhamento PBIA",
-      "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-29-2026/chamadapublica29_2026_RHAEIA_2769274.pdf",
-      "grupo": null
-    },
-    {
-      "edital": "FAPERJ nº 18/2026 – Pesquisa em Obesidade (CNE/CNPq A-B)",
-      "fonte": "FAPERJ/SECTI-RJ",
-      "status": "aberto",
-      "abertura": "24/09/2026",
-      "encerramento": "12/10/2026",
-      "dias": "4",
-      "tipo_publico": "Pessoa Física",
-      "publico": "Pesquisadores CNE/FAPERJ ou CNPq A-B, vinculados a instituições no RJ; rede com no mínimo 5 pesquisadores",
-      "valor": "Até R$ 1 mi/projeto; R$ 9,5 mi no edital",
       "contrapartida": "Não encontrado",
-      "exigencias": "SisFAPERJ; projeto de até 20 páginas; execução no RJ; rede com ICTs e/ou serviços SUS",
-      "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_N%C2%BA_18_2026_%E2%80%93_Programa_de_Aux%C3%ADlio_%C3%A0_Pesquisa_em_Obesidade_Para_Pesquisadores_CNE-FAPERJ_ou_CNPq_N%C3%ADveis_A_ou_B.pdf",
-      "grupo": null
-    },
-    {
-      "edital": "FAPERJ nº 19/2026 – Pesquisa em Obesidade (JCNE/CNPq C-D)",
-      "fonte": "FAPERJ/SECTI-RJ",
-      "status": "aberto",
-      "abertura": "24/09/2026",
-      "encerramento": "12/10/2026",
-      "dias": "4",
-      "tipo_publico": "Pessoa Física",
-      "publico": "Pesquisadores JCNE/FAPERJ ou CNPq C-D, vinculados a instituições no RJ; rede com no mínimo 3 pesquisadores",
-      "valor": "Até R$ 500 mil/projeto; R$ 9,5 mi no edital",
-      "contrapartida": "Não encontrado",
-      "exigencias": "SisFAPERJ; projeto de até 20 páginas; execução no RJ; rede de pesquisadores elegíveis",
-      "link": "https://www.faperj.br/rp/downloads/EDITAL_FAPERJ_N%C2%BA_19_2026_%E2%80%93_Programa_de_Aux%C3%ADlio_%C3%A0_Pesquisa_em_Obesidade_Para_Pesquisadores_JCNE-FAPERJ_ou_CNPq_N%C3%ADveis_C_ou_D.pdf",
-      "grupo": null
-    },
-    {
-      "edital": "FAPESP–ANR Generic Call for Proposals 2027",
-      "fonte": "FAPESP/ANR",
-      "status": "aberto",
-      "abertura": "15/09/2026",
-      "encerramento": "Pré-cadastro: 13/10/2026",
-      "dias": "5",
-      "tipo_publico": "ICT",
-      "publico": "Pesquisadores de ICTs/IES em SP + parceiros franceses",
-      "valor": "Não encontrado",
-      "contrapartida": "Cofinanciamento pelas agências; percentual não encontrado",
-      "exigencias": "Pré-cadastro conjunto no SAGe e ANR; seis blocos temáticos; proposta completa em 2027",
-      "link": "https://fapesp.br/18378",
+      "exigencias": "Pesquisa aplicada em segurança pública; retificações I e II",
+      "link": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-ssp-n-o-041-2026-programa-de-inovacao-ciencia-e-tecnologia-em-seguranca-publica-de-santa-catarina-inovaseg-sc/",
       "grupo": null
     },
     {
@@ -267,7 +181,7 @@
       "status": "aberto",
       "abertura": "30/09/2026",
       "encerramento": "1ª janela: 16/10/2026 (até 4 janelas até mar/2027)",
-      "dias": "8",
+      "dias": "2",
       "tipo_publico": "Empresa",
       "publico": "MPMEs industriais + fornecedores de tecnologia, com Instituto SENAI coordenador",
       "valor": "R$ 47,5 mi não reembolsáveis; até 70% por projeto",
@@ -282,7 +196,7 @@
       "status": "aberto",
       "abertura": "20/08/2026",
       "encerramento": "16/10/2026",
-      "dias": "8",
+      "dias": "2",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores ICTs SP (redes)",
       "valor": "Até R$ 2,5 mi/rede",
@@ -297,7 +211,7 @@
       "status": "aberto",
       "abertura": "24/09/2026",
       "encerramento": "19/10/2026",
-      "dias": "11",
+      "dias": "5",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores CNE/FAPERJ ou CNPq A-B, vinculados a instituições no RJ; rede com no mínimo 5 pesquisadores",
       "valor": "Até R$ 1 mi/projeto; R$ 9,5 mi no edital",
@@ -312,7 +226,7 @@
       "status": "aberto",
       "abertura": "24/09/2026",
       "encerramento": "19/10/2026",
-      "dias": "11",
+      "dias": "5",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores JCNE/FAPERJ ou CNPq C-D, vinculados a instituições no RJ; rede com no mínimo 3 pesquisadores",
       "valor": "Até R$ 500 mil/projeto; R$ 9,5 mi no edital",
@@ -322,12 +236,27 @@
       "grupo": null
     },
     {
+      "edital": "FAPESC/SED nº 54/2026 – Pesquisa e Inovação na Educação Catarinense",
+      "fonte": "FAPESC",
+      "status": "aberto",
+      "abertura": "10/09/2026",
+      "encerramento": "20/10/2026",
+      "dias": "6",
+      "tipo_publico": "ICT",
+      "publico": "PPGs stricto sensu e licenciaturas de IES/SC",
+      "valor": "Não encontrado",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Termo de Colaboração 005/2025; linhas temáticas prioritárias; retificações I, II e III",
+      "link": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-sed-n-o-054-2026-programa-de-fomento-a-pesquisa-e-inovacao-para-o-desenvolvimento-da-educacao-catarinense/",
+      "grupo": null
+    },
+    {
       "edital": "FAPESP – Biorrefinarias Integradas NWO 2026",
       "fonte": "FAPESP + NWO (Holanda)",
       "status": "aberto",
       "abertura": "2026",
       "encerramento": "20/10/2026",
-      "dias": "12",
+      "dias": "6",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores SP + Holanda (biorrefinarias)",
       "valor": "Não encontrado",
@@ -342,7 +271,7 @@
       "status": "aberto",
       "abertura": "23/09/2026",
       "encerramento": "22/10/2026",
-      "dias": "14",
+      "dias": "8",
       "tipo_publico": "Pessoa Física",
       "publico": "PF com ideia / startups nascentes (RJ)",
       "valor": "Até R$ 128 mil + bolsa",
@@ -357,7 +286,7 @@
       "status": "aberto",
       "abertura": "02/10/2026",
       "encerramento": "26/10/2026",
-      "dias": "18",
+      "dias": "12",
       "tipo_publico": "Empresa",
       "publico": "Candidatos indígenas à pós-graduação",
       "valor": "Bolsas CAPES",
@@ -372,7 +301,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "26/10/2026",
-      "dias": "18",
+      "dias": "12",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores responsáveis por auxílios FAPESP vigentes e parceiros internacionais",
       "valor": "Não encontrado",
@@ -387,7 +316,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "28/10/2026",
-      "dias": "20",
+      "dias": "14",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores de ICTs/IES de SP + parceiros de oito países (Ciências Humanas e Sociais)",
       "valor": "Não encontrado",
@@ -402,7 +331,7 @@
       "status": "aberto",
       "abertura": "22/06/2026",
       "encerramento": "30/10/2026",
-      "dias": "22",
+      "dias": "16",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores doutores em ICTs/IES de FAPs participantes + equipe da Bélgica",
       "valor": "Até 4 bolsas de mobilidade internacional por projeto; deslocamento de R$ 9 mil e seguro",
@@ -417,7 +346,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "01/11/2026",
-      "dias": "24",
+      "dias": "18",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores de países em desenvolvimento para pós-doutorado em instituições de SP",
       "valor": "Não encontrado",
@@ -432,7 +361,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "03/11/2026",
-      "dias": "26",
+      "dias": "20",
       "tipo_publico": "Empresa",
       "publico": "Pequenas empresas sediadas ou com P&D em SP",
       "valor": "Até R$ 500 mil/projeto; R$ 25 mi na chamada",
@@ -447,7 +376,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "03/11/2026",
-      "dias": "26",
+      "dias": "20",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores de ICTs/IES de SP em consórcio internacional (interdisciplinar)",
       "valor": "Não encontrado",
@@ -457,12 +386,27 @@
       "grupo": null
     },
     {
+      "edital": "FAPESC/CNPq/CAPES nº 55/2026 – PROFIX-CB (Fixação de Doutores)",
+      "fonte": "FAPESC",
+      "status": "aberto",
+      "abertura": "23/09/2026",
+      "encerramento": "06/11/2026",
+      "dias": "23",
+      "tipo_publico": "ICT",
+      "publico": "PPGs stricto sensu de IES/SC credenciadas",
+      "valor": "Não encontrado",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Programa de fixação de doutores no Brasil; linhas temáticas prioritárias; processo SEI CNPq 01300.001930/2026-14",
+      "link": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-cnpq-capes-n-o-55-2026-programa-de-apoio-a-fixacao-de-doutores-no-brasil-profix-cb/",
+      "grupo": null
+    },
+    {
       "edital": "FAPESP – Aperfeiçoamento de especialistas em museus e acervos (PAIP)",
       "fonte": "FAPESP",
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "06/11/2026",
-      "dias": "29",
+      "dias": "23",
       "tipo_publico": "ICT",
       "publico": "Especialistas e ICTs de SP (infraestrutura de pesquisa)",
       "valor": "Não encontrado",
@@ -472,12 +416,27 @@
       "grupo": null
     },
     {
+      "edital": "Finep Rede EUREKA – Resiliência a Desastres (fase nacional)",
+      "fonte": "FINEP/MCTI",
+      "status": "aberto",
+      "abertura": "07/10/2026",
+      "encerramento": "06/11/2026",
+      "dias": "23",
+      "tipo_publico": "Empresa",
+      "publico": "Empresas brasileiras que participaram da etapa internacional da Rede EUREKA",
+      "valor": "R$ 1 mi a R$ 5 mi por projeto; R$ 7 mi na chamada",
+      "contrapartida": "Contrapartida financeira proporcional ao porte",
+      "exigencias": "Consórcio transnacional (Áustria, Bélgica/Flandres, Chile, Lituânia, Espanha, Turquia, Ucrânia); nenhum parceiro >70%; TRL 4 a 8; duração até 36 meses",
+      "link": "https://www.finep.gov.br/w/finep-abre-chamada-de-r-7-milh%C3%B5es-da-rede-eureka-para-financiar-projetos-de-resili%C3%AAncia-a-desastres",
+      "grupo": null
+    },
+    {
       "edital": "Biodiversa+ – BiodivFuture 2026–2027",
       "fonte": "Horizon Europe; BR via CONFAP",
       "status": "aberto",
       "abertura": "09/09/2026",
       "encerramento": "Pré: 10/11/2026; completa: 16/04/2027",
-      "dias": "33",
+      "dias": "27",
       "tipo_publico": "Empresa",
       "publico": "Consórcios transnacionais (BR participa)",
       "valor": "~€1 mi",
@@ -492,7 +451,7 @@
       "status": "aberto",
       "abertura": "08/09/2026",
       "encerramento": "Pré: 10/11/2026; completa: 06/04/2027",
-      "dias": "33",
+      "dias": "27",
       "tipo_publico": "Empresa",
       "publico": "Consórcios transnacionais (BR participa)",
       "valor": "~30 países",
@@ -502,12 +461,27 @@
       "grupo": null
     },
     {
+      "edital": "FAPESP PIPE Jornada Tecnológica – 7ª Chamada (Educação)",
+      "fonte": "FAPESP",
+      "status": "aberto",
+      "abertura": "13/10/2026",
+      "encerramento": "12/11/2026",
+      "dias": "29",
+      "tipo_publico": "Empresa",
+      "publico": "Pequenas empresas de SP (perfil PIPE)",
+      "valor": "Não encontrado",
+      "contrapartida": "Não encontrado",
+      "exigencias": "SAGe; programa PIPE Jornada Tecnológica (tema Educação)",
+      "link": "https://fapesp.br/chamadas/",
+      "grupo": null
+    },
+    {
       "edital": "Sustainable Blue Economy Partnership – 4ª Call",
       "fonte": "Horizon Europe; BR via CONFAP",
       "status": "aberto",
       "abertura": "14/09/2026",
       "encerramento": "Pré: 16/11/2026; completa: 14/06/2027",
-      "dias": "39",
+      "dias": "33",
       "tipo_publico": "Empresa",
       "publico": "Consórcios transnacionais (BR participa)",
       "valor": "~€37 mi totais",
@@ -522,7 +496,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "18/11/2026",
-      "dias": "41",
+      "dias": "35",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores de ICTs/IES de SP + parceiros europeus (Ciência de Materiais e Engenharia)",
       "valor": "Não encontrado",
@@ -537,7 +511,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "19/11/2026",
-      "dias": "42",
+      "dias": "36",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores internacionais (modalidade Jovem Pesquisador) vinculados a ICTs/IES de SP",
       "valor": "Não encontrado",
@@ -547,12 +521,42 @@
       "grupo": null
     },
     {
+      "edital": "MSCA Doctoral Networks 2026 (Horizon Europe)",
+      "fonte": "Comissão Europeia / MSCA",
+      "status": "aberto",
+      "abertura": "28/05/2026",
+      "encerramento": "24/11/2026",
+      "dias": "41",
+      "tipo_publico": "ICT",
+      "publico": "Consórcios internacionais de universidades, institutos e empresas",
+      "valor": "€593 mi (orçamento global)",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Consórcio ≥3 entidades de 3 países (≥2 na UE/associados); Brasil participa como parceiro de país terceiro (sem financiamento UE)",
+      "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-doctoral-networks-2026",
+      "grupo": null
+    },
+    {
+      "edital": "Finep Mais Inovação Brasil R2 – Semicondutores",
+      "fonte": "MCTI/FINEP/FNDCT",
+      "status": "aberto",
+      "abertura": "Não encontrado",
+      "encerramento": "25/11/2026",
+      "dias": "42",
+      "tipo_publico": "Empresa",
+      "publico": "Empresas brasileiras de todos os portes",
+      "valor": "Subvenção econômica (Rodada 2 do programa Mais Inovação Brasil)",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Prorrogado de 30/09/2026 para 25/11/2026; risco tecnológico em semicondutores e microeletrônica",
+      "link": "https://finep.gov.br/chamadas-publicas/chamadapublica/780",
+      "grupo": null
+    },
+    {
       "edital": "FINEP Mais Inovação Brasil R2 – Transformação Mineral",
       "fonte": "MCTI/FINEP/FNDCT",
       "status": "aberto",
       "abertura": "06/02/2026",
       "encerramento": "30/11/2026",
-      "dias": "53",
+      "dias": "47",
       "tipo_publico": "ICT",
       "publico": "Empresas com parceria obrigatória de ICT",
       "valor": "R$ 215 mi em subvenção econômica",
@@ -562,27 +566,12 @@
       "grupo": null
     },
     {
-      "edital": "Finep COOPERAMAIS Tecnologia – ICT",
-      "fonte": "MCTI/FINEP/FNDCT",
-      "status": "aberto",
-      "abertura": "22/09/2026",
-      "encerramento": "01/12/2026",
-      "dias": "54",
-      "tipo_publico": "ICT",
-      "publico": "ICTs públicas ou privadas sem fins lucrativos + cooperativa da agricultura familiar",
-      "valor": "R$ 3–15 mi/projeto; R$ 100 mi na chamada",
-      "contrapartida": "Financeira; percentual não encontrado",
-      "exigencias": "TRL inicial ≥ 3; cooperativa com CAF e 70% de cooperados com CAF PF; parceria prévia de 1 ano",
-      "link": "https://www.finep.gov.br/en/e/chamada-publica/222684/1060260",
-      "grupo": null
-    },
-    {
       "edital": "FOREST 2026 – Chamada Transnacional Conjunta",
       "fonte": "Horizon Europe/CONFAP",
       "status": "aberto",
       "abertura": "15/09/2026",
       "encerramento": "Pré: 02/12/2026; completa: 02/06/2027",
-      "dias": "55",
+      "dias": "49",
       "tipo_publico": "ICT",
       "publico": "Consórcio de ≥3 países, com ≥2 da UE/associados; ICTs de FAPs participantes",
       "valor": ">€40 mi no programa; valor por projeto não encontrado",
@@ -597,7 +586,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "08/12/2026",
-      "dias": "61",
+      "dias": "55",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores de ICTs/IES de SP (Sociobioeconomia)",
       "valor": "Não encontrado",
@@ -607,12 +596,42 @@
       "grupo": null
     },
     {
+      "edital": "Finep COOPERAMAIS Tecnologia – ICT",
+      "fonte": "MCTI/FINEP/FNDCT",
+      "status": "aberto",
+      "abertura": "22/09/2026",
+      "encerramento": "08/12/2026",
+      "dias": "55",
+      "tipo_publico": "ICT",
+      "publico": "ICTs públicas ou privadas sem fins lucrativos + cooperativa da agricultura familiar",
+      "valor": "R$ 3–15 mi/projeto; R$ 100 mi na chamada",
+      "contrapartida": "Financeira; percentual não encontrado",
+      "exigencias": "TRL inicial ≥ 3; cooperativa com CAF e 70% de cooperados com CAF PF; parceria prévia de 1 ano",
+      "link": "https://www.finep.gov.br/en/e/chamada-publica/222684/1060260",
+      "grupo": null
+    },
+    {
+      "edital": "FAPESP PIPE Jornada Tecnológica – Indústria do Futuro (Fase 1)",
+      "fonte": "FAPESP",
+      "status": "aberto",
+      "abertura": "08/09/2026",
+      "encerramento": "09/12/2026",
+      "dias": "56",
+      "tipo_publico": "Empresa",
+      "publico": "Pequenas empresas sediadas ou com P&D em SP",
+      "valor": "Até R$ 500 mil/projeto; R$ 25 mi na chamada",
+      "contrapartida": "Não encontrado",
+      "exigencias": "SAGe; pesquisador responsável sócio da empresa e residente em SP; até 250 empregados",
+      "link": "https://fapesp.br/18349",
+      "grupo": null
+    },
+    {
       "edital": "CNPq nº 30/2026 – Programa MAI/DAI (Mestrado e Doutorado para Inovação)",
       "fonte": "CNPq/CAPES",
       "status": "aberto",
       "abertura": "19/08/2026",
       "encerramento": "11/12/2026",
-      "dias": "64",
+      "dias": "58",
       "tipo_publico": "ICT",
       "publico": "ICTs/IES com mestrado/doutorado",
       "valor": "Não encontrado",
@@ -627,7 +646,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "11/12/2026",
-      "dias": "64",
+      "dias": "58",
       "tipo_publico": "Empresa",
       "publico": "Bolsistas de IC com auxílio FAPESP vigente",
       "valor": "Bolsa BEPE",
@@ -642,7 +661,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "11/12/2026",
-      "dias": "64",
+      "dias": "58",
       "tipo_publico": "Empresa",
       "publico": "Mestrandos com auxílio FAPESP vigente",
       "valor": "Bolsa BEPE",
@@ -657,7 +676,7 @@
       "status": "aberto",
       "abertura": "07/10/2026",
       "encerramento": "07/01/2027",
-      "dias": "91",
+      "dias": "85",
       "tipo_publico": "Pessoa Física",
       "publico": "Pesquisadores doutores",
       "valor": "Bolsa de produtividade",
@@ -672,12 +691,12 @@
       "status": "aberto",
       "abertura": "09/09/2026",
       "encerramento": "14/01/2027",
-      "dias": "98",
+      "dias": "92",
       "tipo_publico": "ICT",
       "publico": "ICTs públicas ou privadas sem fins lucrativos com ITCP e NIT",
       "valor": "R$ 2–5 mi/projeto; R$ 100 mi totais",
       "contrapartida": "Isenta para ICT federal/privada sem fins lucrativos; estadual/municipal conforme LDO",
-      "exigencias": "Cadastro SISGON até 09/10/2026; rede solidária e carta de anuência; agroecologia, resíduos, energia e sistemas digitais",
+      "exigencias": "Cadastro SISGON até 17/11/2026; rede solidária e carta de anuência; agroecologia, resíduos, energia e sistemas digitais",
       "link": "https://www.finep.gov.br/en/e/chamada-publica/222684/1057230",
       "grupo": null
     },
@@ -687,7 +706,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "15/02/2027",
-      "dias": "130",
+      "dias": "124",
       "tipo_publico": "Empresa",
       "publico": "Consórcios de pesquisa (SP + parceiros europeus da parceria RAMP)",
       "valor": "Não encontrado",
@@ -702,7 +721,7 @@
       "status": "aberto",
       "abertura": "Não encontrado",
       "encerramento": "26/02/2027",
-      "dias": "141",
+      "dias": "135",
       "tipo_publico": "ICT",
       "publico": "Pesquisadores doutores vinculados a ICTs/IES de São Paulo",
       "valor": "Até R$ 1,5 mi/proposta",
@@ -717,7 +736,7 @@
       "status": "aberto",
       "abertura": "03/09/2026",
       "encerramento": "31/03/2027",
-      "dias": "174",
+      "dias": "168",
       "tipo_publico": "Empresa",
       "publico": "Grupos de pesquisa brasileiros e franceses",
       "valor": "Não encontrado",
@@ -732,7 +751,7 @@
       "status": "aberto",
       "abertura": "22/09/2026",
       "encerramento": "30/04/2027",
-      "dias": "204",
+      "dias": "198",
       "tipo_publico": "Empresa",
       "publico": "Empresas de qualquer porte + cooperativas da agricultura familiar",
       "valor": "R$ 5–20 mi/projeto; R$ 120 mi na chamada",
@@ -762,7 +781,7 @@
       "status": "breve",
       "abertura": "26/10/2026",
       "encerramento": "26/11/2026",
-      "dias": "49",
+      "dias": "43",
       "tipo_publico": "Pessoa Física",
       "publico": "Orientadores e bolsistas vinculados a instituições sediadas no RJ",
       "valor": "Bolsa INT (valor conforme tabela FAPERJ)",
@@ -777,7 +796,7 @@
       "status": "breve",
       "abertura": "26/10/2026",
       "encerramento": "26/11/2026",
-      "dias": "49",
+      "dias": "43",
       "tipo_publico": "Pessoa Física",
       "publico": "Orientadores e estudantes vinculados a instituições sediadas no RJ",
       "valor": "Bolsa IT (valor conforme tabela FAPERJ)",
@@ -787,33 +806,48 @@
       "grupo": null
     },
     {
+      "edital": "5ª Chamada Finep/RCN – Brasil-Noruega (Rede EUREKA)",
+      "fonte": "FINEP + Research Council of Norway",
+      "status": "breve",
+      "abertura": "09/11/2026",
+      "encerramento": "16/12/2026",
+      "dias": "63",
+      "tipo_publico": "ICT",
+      "publico": "ICTs e empresas brasileiras em consórcio quadripartite com a Noruega",
+      "valor": "Até R$ 3 mi por projeto (Finep); até NOK 10 mi (RCN)",
+      "contrapartida": "ICT até 100%; empresas cofinanciam (mín. 20%)",
+      "exigencias": "Consórcio ICT+empresa (BR) e ICT+empresa (NO); Selo EUREKA; Consortium Agreement; temas de energia limpa e transporte marítimo verde",
+      "link": "https://www.finep.gov.br/e/chamada-publica/222684/1019381",
+      "grupo": null
+    },
+    {
+      "edital": "FutureFoodS – 3ª Chamada Transnacional (GETS)",
+      "fonte": "FutureFoodS (Horizon Europe)",
+      "status": "breve",
+      "abertura": "Novembro/2026",
+      "encerramento": "Pré-proposta: 11/01/2027",
+      "dias": "89",
+      "tipo_publico": "ICT",
+      "publico": "Universidades, institutos, empresas e órgãos públicos (consórcios transnacionais)",
+      "valor": "Definido por agência nacional",
+      "contrapartida": "Não encontrado",
+      "exigencias": "Consórcio mínimo de 3 parceiros de 3 países; temas de cadeias alimentares confiáveis, comportamento do consumidor e processamento inovador (pós-colheita); participação brasileira a confirmar",
+      "link": "https://futurefoodspartnership.eu/funding-opportunities",
+      "grupo": null
+    },
+    {
       "edital": "Eureka Eurostars – Call 12 for projects",
       "fonte": "Eureka/Horizon Europe",
       "status": "breve",
       "abertura": "17/12/2026",
       "encerramento": "04/03/2027",
-      "dias": "147",
+      "dias": "141",
       "tipo_publico": "Empresa",
       "publico": "PMEs inovadoras líderes de consórcio + parceiros",
       "valor": "Conforme regra nacional de cada parceiro",
       "contrapartida": "Cofinanciamento por agência nacional",
       "exigencias": "Consórcio liderado por PME; ≥2 entidades de 2 países; elegibilidade do Brasil a confirmar",
       "link": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027",
-      "grupo": null
-    },
-    {
-      "edital": "FAPESP PIPE Jornada Tecnológica – 7ª Chamada (Educação)",
-      "fonte": "FAPESP",
-      "status": "breve",
-      "abertura": "13/10/2026",
-      "encerramento": "Não encontrado",
-      "dias": "—",
-      "tipo_publico": "Empresa",
-      "publico": "Pequenas empresas de SP (perfil PIPE)",
-      "valor": "Não encontrado",
-      "contrapartida": "Não encontrado",
-      "exigencias": "SAGe; programa PIPE Jornada Tecnológica (tema Educação)",
-      "link": "https://fapesp.br/chamadas/",
       "grupo": null
     },
     {
@@ -937,6 +971,51 @@
       "grupo": "contínuo"
     },
     {
+      "edital": "FAPESP–DFG (Alemanha)",
+      "fonte": "FAPESP/DFG",
+      "status": "continuo",
+      "abertura": "Permanente",
+      "encerramento": "Contínuo",
+      "dias": "—",
+      "tipo_publico": "Pessoa Física",
+      "publico": "Pesquisadores de SP com parceiros alemães financiados pela DFG",
+      "valor": "Auxílio à Pesquisa Regular e Projeto Temático",
+      "contrapartida": "Não exige (co-financiamento pelas agências)",
+      "exigencias": "Fluxo contínuo; projeto conjunto com pesquisador com auxílio DFG vigente",
+      "link": "https://fapesp.br/acordos-dfg",
+      "grupo": "contínuo"
+    },
+    {
+      "edital": "FAPESP–NSF (National Science Foundation, EUA)",
+      "fonte": "FAPESP/NSF",
+      "status": "continuo",
+      "abertura": "Permanente",
+      "encerramento": "Contínuo",
+      "dias": "—",
+      "tipo_publico": "Pessoa Física",
+      "publico": "Pesquisadores de SP em Geociências com parceiros nos EUA",
+      "valor": "Auxílio à Pesquisa Regular e Temático",
+      "contrapartida": "Não exige (co-financiamento pelas agências)",
+      "exigencias": "Fluxo contínuo; projeto conjunto com pesquisador financiado pela NSF (Geociências)",
+      "link": "https://fapesp.br/17293",
+      "grupo": "contínuo"
+    },
+    {
+      "edital": "FAPESP–UKRI (Reino Unido)",
+      "fonte": "FAPESP/UKRI",
+      "status": "continuo",
+      "abertura": "Permanente",
+      "encerramento": "Contínuo",
+      "dias": "—",
+      "tipo_publico": "Pessoa Física",
+      "publico": "Pesquisadores de SP com parceiros do Reino Unido",
+      "valor": "Auxílio à Pesquisa Regular, Jovem Pesquisador ou Temático",
+      "contrapartida": "Não exige (co-financiamento pelas agências)",
+      "exigencias": "Fluxo contínuo; modalidade conforme o conselho de pesquisa do Reino Unido parceiro",
+      "link": "http://www.fapesp.br/10273",
+      "grupo": "contínuo"
+    },
+    {
       "edital": "Habitats de Inovação (SENAI)",
       "fonte": "SENAI (Plataforma Inovação)",
       "status": "continuo",
@@ -953,6 +1032,13 @@
     }
   ],
   "aderencia": [
+    {
+      "edital": "5ª Chamada Finep/RCN – Brasil-Noruega (Rede EUREKA)",
+      "institutos": "ISI Biomassa; IST Eficiência Operacional",
+      "grau": "alta",
+      "foco_educacional": "Não",
+      "justificativa": "Energia limpa, petróleo offshore e transporte marítimo verde alinham-se à bioenergia (ISI Biomassa) e à eficiência de processos (IST Eficiência)."
+    },
     {
       "edital": "Aliança Industrial (SENAI)",
       "institutos": "IST Eficiência Operacional; ISI Biomassa; IST Alimentos",
@@ -994,13 +1080,6 @@
       "grau": "none",
       "foco_educacional": "Sim (foco educacional)",
       "justificativa": "Formação acadêmica, sem componente de inovação industrial."
-    },
-    {
-      "edital": "CNPq nº 29/2026 – RHAE IA (Pesquisadores em Empresas de IA)",
-      "institutos": "—",
-      "grau": "baixa",
-      "foco_educacional": "Não",
-      "justificativa": "Pesquisadores em empresas de IA; foco em startups de IA, não industrial direto."
     },
     {
       "edital": "CNPq nº 30/2026 – Programa MAI/DAI (Mestrado e Doutorado para Inovação)",
@@ -1087,20 +1166,6 @@
       "justificativa": "Edital do RJ; escopo geográfico fora de MS."
     },
     {
-      "edital": "FAPERJ nº 18/2026 – Pesquisa em Obesidade (CNE/CNPq A-B)",
-      "institutos": "IST Alimentos",
-      "grau": "baixa",
-      "foco_educacional": "Não",
-      "justificativa": "Tecnologias diagnósticas e terapêuticas ligadas à obesidade dialogam indiretamente com capacidades laboratoriais, mas o edital é restrito ao RJ."
-    },
-    {
-      "edital": "FAPERJ nº 19/2026 – Pesquisa em Obesidade (JCNE/CNPq C-D)",
-      "institutos": "IST Alimentos",
-      "grau": "baixa",
-      "foco_educacional": "Não",
-      "justificativa": "Pesquisa em obesidade pode ter interface indireta com alimentos e saúde, mas a elegibilidade e execução são restritas ao RJ."
-    },
-    {
       "edital": "FAPERJ nº 20/2026 – Envelhecimento com Qualidade de Vida (CNE/CNPq A-B)",
       "institutos": "—",
       "grau": "none",
@@ -1127,6 +1192,27 @@
       "grau": "baixa",
       "foco_educacional": "Sim (bolsa de iniciação tecnológica)",
       "justificativa": "Bolsa de iniciação tecnológica vinculada a projeto no RJ; interface indireta com P&D aplicado dos institutos."
+    },
+    {
+      "edital": "FAPESC/CNPq/CAPES nº 55/2026 – PROFIX-CB (Fixação de Doutores)",
+      "institutos": "—",
+      "grau": "none",
+      "foco_educacional": "Sim (fixação de doutores)",
+      "justificativa": "Fixação de doutores e fortalecimento de pós-graduação; foco de formação de RH, fora do escopo de P&D dos institutos."
+    },
+    {
+      "edital": "FAPESC/SED nº 54/2026 – Pesquisa e Inovação na Educação Catarinense",
+      "institutos": "—",
+      "grau": "none",
+      "foco_educacional": "Sim (foco educacional)",
+      "justificativa": "Fomento à pesquisa e inovação em educação; foco educacional, sem componente industrial direto."
+    },
+    {
+      "edital": "FAPESC/SSP nº 41/2026 – INOVASEG/SC (Segurança Pública)",
+      "institutos": "IST Eficiência Operacional",
+      "grau": "baixa",
+      "foco_educacional": "Não",
+      "justificativa": "Pesquisa aplicada e inovação em segurança pública; interface indireta com tecnologias digitais/sensores do IST Eficiência."
     },
     {
       "edital": "FAPESP / CONFAP / RAMP – Raw Materials for the Green and Digital Transition",
@@ -1241,11 +1327,25 @@
       "justificativa": "Segurança alimentar, bioenergia e biotecnologia industrial são linhas diretas do ISI Biomassa e do IST Alimentos."
     },
     {
-      "edital": "FAPESP–ANR Generic Call for Proposals 2027",
-      "institutos": "IST Eficiência Operacional; ISI Biomassa; IST Alimentos",
+      "edital": "FAPESP–DFG (Alemanha)",
+      "institutos": "IST Eficiência Operacional; ISI Biomassa",
       "grau": "media",
       "foco_educacional": "Não",
-      "justificativa": "Engenharia, materiais, recursos biológicos e saúde podem comportar P&D dos institutos, mediante parceria elegível em SP."
+      "justificativa": "Cooperação contínua Brasil-Alemanha em todas as áreas, com potencial de P&D em processos e biomateriais."
+    },
+    {
+      "edital": "FAPESP–NSF (National Science Foundation, EUA)",
+      "institutos": "IST Eficiência Operacional; ISI Biomassa",
+      "grau": "media",
+      "foco_educacional": "Não",
+      "justificativa": "Cooperação contínua em Geociências; pode dialogar com análise de materiais e recursos naturais, mediante parceria elegível em SP."
+    },
+    {
+      "edital": "FAPESP–UKRI (Reino Unido)",
+      "institutos": "IST Eficiência Operacional; ISI Biomassa",
+      "grau": "media",
+      "foco_educacional": "Não",
+      "justificativa": "Cooperação contínua Brasil-Reino Unido; aderência depende do tema e de parceria elegível em SP."
     },
     {
       "edital": "FINEP Mais Inovação Brasil R2 – Transformação Mineral",
@@ -1262,13 +1362,6 @@
       "justificativa": "Produtos florestais e materiais de base biológica se alinham a biomassa e processos industriais."
     },
     {
-      "edital": "FUNDECT-MS nº 09/2026 – PAE-MS (eventos C,T&I)",
-      "institutos": "Sem aderência direta aos institutos",
-      "grau": "none",
-      "foco_educacional": "Sim, divulgação científica; fora do escopo de P&D",
-      "justificativa": "A chamada financia a realização de eventos; não há componente de P&D institucional identificado."
-    },
-    {
       "edital": "Finep COOPERAMAIS Brasil Tecnologias – Empresas",
       "institutos": "IST Alimentos; IST Eficiência Operacional; ISI Biomassa",
       "grau": "alta",
@@ -1283,11 +1376,32 @@
       "justificativa": "Processamento agroindustrial, resíduos e eficiência energética se alinham às capacidades dos institutos."
     },
     {
+      "edital": "Finep Mais Inovação Brasil R2 – Semicondutores",
+      "institutos": "IST Eficiência Operacional",
+      "grau": "media",
+      "foco_educacional": "Não",
+      "justificativa": "Semicondutores e microeletrônica são insumo de automação/indústria 4.0, com aderência temática ao IST Eficiência Operacional."
+    },
+    {
       "edital": "Finep PRONINC 2026 – Tecnologias para Economia Solidária",
       "institutos": "IST Alimentos; ISI Biomassa; IST Eficiência Operacional",
       "grau": "alta",
       "foco_educacional": "Não",
       "justificativa": "Soluções tecnológicas em alimentos, resíduos e energia aderem aos institutos; exige atuação conjunta de ITCP e NIT."
+    },
+    {
+      "edital": "Finep Rede EUREKA – Resiliência a Desastres (fase nacional)",
+      "institutos": "IST Eficiência Operacional; ISI Biomassa",
+      "grau": "alta",
+      "foco_educacional": "Não",
+      "justificativa": "Resiliência a desastres e manufatura avançada dialoga com automação/processos industriais (IST Eficiência) e novos materiais (ISI Biomassa)."
+    },
+    {
+      "edital": "FutureFoodS – 3ª Chamada Transnacional (GETS)",
+      "institutos": "IST Alimentos e Bebidas",
+      "grau": "alta",
+      "foco_educacional": "Não",
+      "justificativa": "Cadeias de valor alimentares, pós-colheita e processamento inovador são o núcleo do IST Alimentos e Bebidas (Dourados)."
     },
     {
       "edital": "Habitats de Inovação (SENAI)",
@@ -1297,18 +1411,18 @@
       "justificativa": "Acesso à infraestrutura dos Institutos para PD&I; aderência depende do habitat/tema."
     },
     {
+      "edital": "MSCA Doctoral Networks 2026 (Horizon Europe)",
+      "institutos": "ISI Biomassa",
+      "grau": "baixa",
+      "foco_educacional": "Sim (formação doutoral)",
+      "justificativa": "Formação doutoral em rede internacional; pode envolver linhas dos institutos, mas é essencialmente educacional."
+    },
+    {
       "edital": "MSCA Staff Exchanges 2027 (Horizon Europe)",
       "institutos": "ISI Biomassa",
       "grau": "alta",
       "foco_educacional": "Não",
       "justificativa": "Intercâmbio de pessoal de PD&I pode fortalecer linhas de bioprocessos/biomassa, com aporte da FAP estadual."
-    },
-    {
-      "edital": "Spain (CDTI) – Brazil (CONFAP) 2026–2027 Call",
-      "institutos": "IST Eficiência Operacional; ISI Biomassa",
-      "grau": "alta",
-      "foco_educacional": "Não",
-      "justificativa": "Consórcios empresa BR+ES com potencial comercial; ICTs de MS podem compor via FAP."
     },
     {
       "edital": "Sustainable Blue Economy Partnership – 4ª Call",
@@ -1327,24 +1441,29 @@
   ],
   "nao_confirmado": [
     {
-      "edital": "FAPERJ nº 07/2026 – Agro do Futuro",
-      "fonte": "FAPERJ",
-      "motivo": "Faixas/contrapartidas conhecidas (5%–20%), mas data de encerramento ausente na busca."
-    },
-    {
-      "edital": "FUNDECT-MS nº 01/2026 – Centelha MS (3ª edição)",
-      "fonte": "FUNDECT",
-      "motivo": "Página \"Em andamento/Alteração de Cronograma\" com prazos conflitantes (já anteriores a 27/08); status indefinido."
-    },
-    {
       "edital": "InovAtiva Brasil 2026 (2º semestre)",
       "fonte": "MCTI/Sebrae",
-      "motivo": "Ciclo 2026 encerrado; site suspenso por período eleitoral (04/07–25/10); novas janelas não confirmadas."
+      "motivo": "Ciclo 2026 encerrado; site oficial suspenso (04/07 a 25/10/2026) por período eleitoral; novas janelas não confirmadas."
     },
     {
-      "edital": "Fundação Grupo Boticário – 57º Edital Conservação da Natureza",
-      "fonte": "FGB",
-      "motivo": "Prazo de submissão \"indefinido\" nas fontes consultadas."
+      "edital": "FACEPE nº 31/2026 – Ciência no Governo (Cientista Arretado)",
+      "fonte": "FACEPE",
+      "motivo": "Chamada publicada em 01/10/2026; prazo de submissão não localizado nas fontes consultadas."
+    },
+    {
+      "edital": "FACEPE nº 32/2026 – Desafios.Gov",
+      "fonte": "FACEPE",
+      "motivo": "Chamada publicada em 30/09/2026; prazo de submissão não localizado nas fontes consultadas."
+    },
+    {
+      "edital": "FACEPE nº 33/2026 – Pró-Startups Operação",
+      "fonte": "FACEPE",
+      "motivo": "Chamada publicada em 30/09/2026; prazo de submissão não localizado nas fontes consultadas."
+    },
+    {
+      "edital": "MCTI/FINEP – Conhecimento Brasil (R$ 500 mi)",
+      "fonte": "FINEP/MCTI",
+      "motivo": "Fontes divergentes: página oficial sem informação disponível e registro de prazo encerrado em 11/09/2026."
     }
   ]
 }
