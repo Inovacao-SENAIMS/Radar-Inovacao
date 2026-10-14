@@ -49,23 +49,39 @@ _INSTITUTOS = (
 )
 
 
-def _summarize(base):
+def _summarize(base, limit=None):
     rows = []
     for e in base.get("editais", []):
         rows.append(
             f"- {e.get('edital','')} | fonte: {e.get('fonte','')} | "
             f"status: {e.get('status','')} | encerramento: {e.get('encerramento','')} | {e.get('link','')}"
         )
+        if limit and len(rows) >= limit:
+            break
     return "\n".join(rows) if rows else "(base anterior vazia)"
 
 
-def build(base, today_iso, methodology):
+def build(base, today_iso, methodology, context="", focus="", max_editais=None, max_base=None):
+    context_block = ""
+    if context:
+        context_block = (
+            "\nRESULTADOS DE BUSCA WEB (coletados agora; use como evidência das datas e links, "
+            "mas priorize a fonte oficial quando houver conflito):\n"
+            f"{context}\n"
+        )
+    focus_block = ""
+    if focus or max_editais:
+        focus_block = "\nFOCO DESTA REQUISIÇÃO:\n"
+        if focus:
+            focus_block += f"- Cubra APENAS as fontes/temas: {focus}.\n"
+        if max_editais:
+            focus_block += f"- Retorne no máximo {int(max_editais)} editais.\n"
     return f"""Você é o analista de monitoramento de editais de inovação do SENAI MS.
 Data de referência (hoje): {today_iso} (America/Cuiaba). Classifique status/prazos comparando com esta data.
 
 METODOLOGIA (obrigatória):
 {methodology}
-
+{context_block}{focus_block}
 REGRA CRÍTICA DE ESCOPO: a busca é ampla — qualquer área de inovação, qualquer nacionalidade, qualquer público.
 Não exclua editais por parecerem fora do escopo dos institutos; a aderência é uma camada extra ao final.
 
@@ -83,6 +99,6 @@ REGRAS:
 - NÃO inclua campos calculados (dias restantes, contagens, novidades) — serão derivados depois.
 
 BASE ANTERIOR (para continuidade e reavaliação):
-{_summarize(base)}
+{_summarize(base, max_base)}
 
 Responda APENAS com o JSON no schema fornecido."""

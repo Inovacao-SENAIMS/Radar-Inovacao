@@ -79,14 +79,16 @@ export NEWSLETTER_API_KEY="a-mesma-chave-do-apps-script"
 
 No Gmail, a senha de app exige autenticação em duas etapas. Como alternativa local, crie `scripts/newsletter_secrets.json`; esse caminho já está no `.gitignore`.
 
-## Atualização automática 3x/semana (Gemini)
+## Atualização automática 3x/semana (Groq + busca web)
 
-O workflow `.github/workflows/radar-monitor.yml` roda **seg/qua/sex às 08h (America/Cuiaba — cron `0 12 * * 1,3,5` UTC)**, pesquisa editais com **Google Gemini + busca web**, regenera `data/editais.json`/`data/editais.js`/`data/Monitoramento_Editais_Inovacao_<data>.md`, publica e chama o envio da newsletter (`--force`, pois o e-mail sai a cada rodada).
+O workflow `.github/workflows/radar-monitor.yml` roda **seg/qua/sex às 08h (America/Cuiaba — cron `0 12 * * 1,3,5` UTC)**, pesquisa editais com **Groq (LLM) + busca web (Tavily ou Brave)**, regenera `data/editais.json`/`data/editais.js`/`data/Monitoramento_Editais_Inovacao_<data>.md`, publica e chama o envio da newsletter (`--force`, pois o e-mail sai a cada rodada).
 
-- Segredo novo: **`GEMINI_API_KEY`** (Google AI Studio) em **Settings → Secrets and variables → Actions**, junto de `GMAIL_USER`, `GMAIL_APP_PASSWORD` e `NEWSLETTER_API_KEY`.
+- Segredos em **Settings → Secrets and variables → Actions**: **`GROQ_API_KEY`** (https://console.groq.com/keys) e a chave de busca **`TAVILY_API_KEY`** (https://tavily.com) **ou** **`BRAVE_API_KEY`** (https://api.search.brave.com), junto de `GMAIL_USER`, `GMAIL_APP_PASSWORD` e `NEWSLETTER_API_KEY`.
+- O **Groq não faz busca web nativa**: a busca é feita por `scripts/web_search.py` (Tavily/Brave) e o resultado é injetado no prompt. Sem chave de busca a rodada falha e abre Issue.
+- Alternativa: manter o **Gemini** (`--provider gemini`), que exige `GEMINI_API_KEY` com cota de *Google Search grounding*.
 - Falha ou resultado suspeito (JSON inválido, poucos editais, links inválidos, queda > 30%): **não publica nem envia** e abre/atualiza uma Issue "Radar automático: falha <data>".
 - Teste manual seguro: **Actions → Radar — atualização automática 3x/semana → Run workflow** com **dry_run = true** (gera e valida sem publicar nem enviar).
-- Script principal: `python scripts/research_editais.py [--dry-run] [--offline FILE] [--date YYYY-MM-DD]`.
+- Script principal: `python scripts/research_editais.py [--provider groq|gemini] [--search-provider auto|tavily|brave] [--dry-run] [--offline FILE] [--date YYYY-MM-DD]`.
 
 > Restrição conhecida: com > ~90 assinantes, o lote diário do Gmail não fecha a edição em uma rodada; nesse cenário, migrar para Google Workspace (~1.500/dia) ou reduzir a frequência do e-mail.
 

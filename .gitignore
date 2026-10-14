@@ -38,9 +38,9 @@ newsletter/
 # Newsletter — segredos locais (preferir variáveis de ambiente)
 scripts/newsletter_secrets.json
 
-#Tests — saídas de teste (cobertura, relatórios, etc.)
+# Tests — saídas de teste (cobertura, relatórios, etc.)
+# Os testes versionados (tests/*.py) NÃO são ignorados; apenas as saídas.
 tests/output/
-tests/
 
 #Imagens — saídas de processamento de imagens (pré-visualizações, thumbnails, etc.)
 images/
@@ -48,6 +48,5 @@ images/output/
 AGENTS.md
 PRD.md
 PROMPT.md
-tests/
 docs/
 Monitoramento_Editais_Inovacao_2026-09-08.md

@@ -10,6 +10,23 @@ on:
         required: true
         default: true
         type: boolean
+      provider:
+        description: 'Motor de geração do JSON'
+        required: false
+        default: groq
+        type: choice
+        options:
+          - groq
+          - gemini
+      search_provider:
+        description: 'Provedor de busca web (só com provider=groq)'
+        required: false
+        default: auto
+        type: choice
+        options:
+          - auto
+          - tavily
+          - brave
 
 permissions:
   contents: write
@@ -24,6 +41,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+      BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
     steps:
       - name: Baixar o repositório
         uses: actions/checkout@v6
@@ -33,7 +53,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Rodar a pesquisa automática (Gemini + busca web)
+      - name: Rodar a pesquisa automática (Groq + busca web)
         id: research
         continue-on-error: true
         run: |
@@ -41,7 +61,10 @@ jobs:
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
             ARGS="--dry-run"
           fi
-          python scripts/research_editais.py $ARGS
+          python scripts/research_editais.py \
+            --provider "${{ inputs.provider || 'groq' }}" \
+            --search-provider "${{ inputs.search_provider || 'auto' }}" \
+            $ARGS
 
       - name: Publicar a atualização
         if: steps.research.outcome == 'success' && github.event_name == 'schedule'
